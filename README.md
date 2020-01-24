@@ -3,7 +3,7 @@
 
 ## Gender Diversity in Film
 
-**Project description:** This app will allow users to explore gender representation and equality in the film industry. Visitors will search for a film (or click on one available) to view gender stats for the cast and crew (i.e. % female vs. % male), the cast and crew members split by gender, and possibly, whether or not that film passes the 3 criteria of the Bechdel Test (Are there 2 named women in the cast? Do they talk to each other? And about something other than a man?).
+This app will allow users to explore gender representation and equality in the film industry. Visitors will search for a film (or click on one available) to view gender stats for the cast and crew (i.e. % female vs. % male), the cast and crew members split by gender, and possibly, whether or not that film passes the 3 criteria of the Bechdel Test (Are there 2 named women in the cast? Do they talk to each other? And about something other than a man?).
 
 ## API Snippet
 https://www.themoviedb.org/documentation/api
@@ -138,19 +138,19 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create Boilerplate for components | H | 1hr| tbd | tbd |
-| Set up API call functions | H | 3hrs| tbd | tbd |
-| Set up Routes for MovieList and MovieDetails in App | H | 1hr | tbd | tbd |
-| Set up Main component with event functions and state | H | 1.5hr | tbd | tbd |
-| Create form on Search and enable event methods  | H | 1.5hr | tbd | tbd |
-| Set up MovieList map and enable MovieButton links | H | 3hrs | tbd | tbd |
-| Set up MovieDetails and ensure router works  | H | 2hrs| tbd | tbd |
-| Create logic for GenderCalc of cast and crew and display result | H | 3hrs| tbd | tbd |
-| Bechdel Test data API call and display result  | L | 2hrs| tbd | tbd |
+| Create Boilerplate for components | H | 2hrs| tbd | tbd |
+| Set up API call functions | H | 2hrs| tbd | tbd |
+| Set up Routes for MovieList and MovieDetails in App | H | 2hrs | tbd | tbd |
+| Set up Main component with event functions and state | H | 2hrs | tbd | tbd |
+| Create form on Search and enable event methods  | H | 2hrs | tbd | tbd |
+| Set up MovieList map and enable MovieButton links | H | 4hrs | tbd | tbd |
+| Set up MovieDetails and ensure router works  | H | 3hrs| tbd | tbd |
+| Create logic for GenderCalc of cast and crew and display result | H | 4hrs| tbd | tbd |
+| Bechdel Test data API call and display result  | L | 3hrs| tbd | tbd |
 | Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| tbd | tbd |
 | CSS styling - desktop  | M | 4hrs| tbd | tbd |
-| CSS styling - mobile | M | 1hr| tbd | tbd |
-| Total | H | 26hrs| tbd | tbd |
+| CSS styling - mobile | M | 2hrs| tbd | tbd |
+| Total | H | 33hrs| tbd | tbd |
 
 ## Project Schedule
 
@@ -159,8 +159,8 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 |Jan 24th| Project Pitch and Approval, Create React App, Components and API calls | In Progress
 |Jan 27th| Build out Main, Search and MovieList for setting state | Incomplete
 |Jan 28th| Build out MovieDetails and logic for GenderCalc and BechdelTest | Incomplete
-|Jan 29th| CSS Styling  | Incomplete
-|Jan 30th| MVP | Incomplete
+|Jan 29th| MVP  | Incomplete
+|Jan 30th| CSS Styling | Incomplete
 |Jan 31st| Presentation | Incomplete
 
 ## Additional Libraries
