@@ -16,3 +16,7 @@ function CastList(props) {
 }
 
 export default CastList
+
+/* 
+Image base URL for profile image: https://image.tmdb.org/t/p/w185
+*/

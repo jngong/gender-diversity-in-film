@@ -10,3 +10,7 @@ function MovieButton(props) {
 }
 
 export default MovieButton
+
+/* 
+Image base URL for poster: https://image.tmdb.org/t/p/w185/
+*/

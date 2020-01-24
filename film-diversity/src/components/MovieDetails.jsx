@@ -25,3 +25,7 @@ class MovieDetails extends Component {
 
 }
 export default MovieDetails
+
+/* 
+Image URL base for backdrop: https://image.tmdb.org/t/p/w1280/
+*/
