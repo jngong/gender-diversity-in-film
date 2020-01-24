@@ -132,7 +132,7 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 ## Priority Matrix
 
-![Priority Matrix](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_300/v1579876753/Priority-Matrix-Project2-Jan24-2020_afywjs.png)
+![Priority Matrix](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_600/v1579876753/Priority-Matrix-Project2-Jan24-2020_afywjs.png)
 
 ## Timeframes
 
