@@ -5,7 +5,7 @@ import MovieList from "./MovieList";
 class Main extends Component {
     constructor(props) {
         super(props)
-        this.setState = {
+        this.state = {
             movieList: []
         }
     }
