@@ -1,7 +1,7 @@
 import React from "react"
 import MovieButton from "./MovieButton"
 
-function MovieList() {
+function MovieList(props) {
 
     return(
         <div className="movie-list">

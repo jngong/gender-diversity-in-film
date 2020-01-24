@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Search from "./Search";
 import MovieList from "./MovieList";
+import MovieDetails from "./MovieDetails";
 
 class Main extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class Main extends Component {
                 <h2>This is the Main Component</h2>
                 <Search />
                 <MovieList />
+                <MovieDetails />
             </div>
         )
     }

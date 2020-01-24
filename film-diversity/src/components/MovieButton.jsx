@@ -1,6 +1,6 @@
 import React from "react"
 
-function MovieButton() {
+function MovieButton(props) {
 
     return(
         <div className="movie-button">
