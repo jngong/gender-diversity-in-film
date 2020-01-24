@@ -3,6 +3,7 @@ import Search from "./Search";
 import MovieList from "./MovieList";
 import MovieDetails from "./MovieDetails";
 import { getMoviesNowPlaying, getMoviesBySearch } from "../services/api-helper"
+import { Route, Switch } from 'react-router-dom'
 
 class Main extends Component {
     constructor(props) {
@@ -22,12 +23,13 @@ class Main extends Component {
 
     render() {
         return(
-            <div className="main">
-                <h2>This is the Main Component</h2>
+            <main>
                 <Search />
-                <MovieList movieList={this.state.movieList} />
-                {/* <MovieDetails /> */}
-            </div>
+                <Switch>
+                    <Route exact path='/' component={props => <MovieList {...props} movieList={this.state.movieList}/>} />
+                    <Route exact path = '/:film_id' component={props => <MovieDetails {...props}/>} />
+                </Switch>
+            </main>
         )
     }
 }
