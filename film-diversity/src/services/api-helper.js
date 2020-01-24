@@ -24,5 +24,5 @@ export const getMovieDetails = async (id) => {
 }
 
 export const getBechdelTest = async (imdb_id) => {
-    const response = await axios.get(`${Bechdel_base}${imdbid}`)
+    const response = await axios.get(`${Bechdel_base}${imdb_id}`)
 }
