@@ -97,9 +97,11 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 - Allow user to search for a movie by title and show results that match 
 - Show a default Home page with an index of movies (i.e. trending) that visitors can click on to browse as an alternative to searching.
 - When user clicks on a movie, route to a page with: 
-	- Movie details sub-header: Title, year, budget, revenue
-	- Summary of gender breakdown: % F vs. M: Cast and Crew; and Does it pass Bechdel’s 3 requirements (if available)? Y/N  
-- Cast / crew graph to visually see # females compared to # males
+	- Movie details sub-header: e.g. Title, year, budget, revenue
+	- Summary of gender breakdown:  
+		- % F vs. M: Cast and Crew
+		- Does it pass Bechdel’s 3 requirements (if available)? Y/N
+	- Visual breakdown of the cast members by gender
 
 #### PostMVP:
 - Convert class components to functional components with hooks to get practice in both
@@ -110,7 +112,7 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 ## React Component Hierarchy
 
-![Component Hierarchy] (https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_700/v1579876754/Component-Hierarchy-Project2-Jan24-2020_kzbdgd.png)
+![Component Hierarchy](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_700/v1579876754/Component-Hierarchy-Project2-Jan24-2020_kzbdgd.png)
 
 ## Components
 
@@ -130,7 +132,7 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 ## Priority Matrix
 
-![Priority Matrix] (https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_300/v1579876753/Priority-Matrix-Project2-Jan24-2020_afywjs.png)
+![Priority Matrix](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_300/v1579876753/Priority-Matrix-Project2-Jan24-2020_afywjs.png)
 
 ## Timeframes
 
@@ -162,9 +164,9 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 |Jan 31st| Presentation | Incomplete
 
 ## Additional Libraries
-Axios - To fetch data from APIs
-React Router - To create navigation via URL parameters rendering different information based on inputs
-Dotenv - To hide API keys and ensure not uploaded to Github
+- Axios - To fetch data from APIs
+- React Router - To create navigation via URL parameters rendering different information based on inputs
+- Dotenv - To hide API keys and ensure not uploaded to Github
 
 ## Issues and Resolutions
 
