@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+
+import {getMovieDetails} from "../services/api-helper"
 import CastList from "./CastList"
 import GenderSummary from "./GenderSummary"
 import BechdelTest from "./BechdelTest"
@@ -12,15 +14,26 @@ class MovieDetails extends Component {
         }
     }
 
+    async componentDidMount() {
+        const data = await getMovieDetails(this.props.match.params.film_id)
+        this.setState({
+            currentMovie: data
+        })
+    }
+
     render() {
+        console.log(this.state.currentMovie)
+        while (this.state.currentMovie === null) {
+            return <div>Loading film details...</div>
+        }
         return(
             <div className="movie-details">
-                <h1>This is the Movie Details component</h1>
-                <CastList />
-                <GenderSummary />
-                <BechdelTest />
+                <h1>{this.state.currentMovie.title}</h1>
+                <CastList currentMovie={this.state.currentMovie} />
+                <GenderSummary currentMovie={this.state.currentMovie}/>
+                <BechdelTest currentMovie={this.state.currentMovie} />
             </div>
-        )
+            )
     }
 
 }

@@ -41,7 +41,14 @@ class Main extends Component {
                                 handleClick={this.handleClick} 
                             />}
                     />
-                    <Route exact path = '/:film_id' component={props => <MovieDetails {...props}/>} />
+                    <Route 
+                        exact path = '/:film_id' 
+                        component=
+                            {props => <MovieDetails 
+                                {...props} 
+                                selectedMovieId={this.state.selectedMovieId}
+                            />}
+                    />
                 </Switch>
             </main>
         )
