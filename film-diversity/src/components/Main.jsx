@@ -10,8 +10,15 @@ class Main extends Component {
         super(props)
         this.state = {
             movieList: [],
-            searchTerm: ''
+            searchTerm: '',
+            selectedMovieId: ''
         }
+    }
+
+    handleClick = (id) => {
+        this.setState({
+            selectedMovieId: id
+        })
     }
 
     async componentDidMount() {
@@ -26,7 +33,14 @@ class Main extends Component {
             <main>
                 <Search />
                 <Switch>
-                    <Route exact path='/' component={props => <MovieList {...props} movieList={this.state.movieList}/>} />
+                    <Route 
+                        exact path='/' component=
+                            {props => <MovieList 
+                                {...props} 
+                                movieList={this.state.movieList} 
+                                handleClick={this.handleClick} 
+                            />}
+                    />
                     <Route exact path = '/:film_id' component={props => <MovieDetails {...props}/>} />
                 </Switch>
             </main>
