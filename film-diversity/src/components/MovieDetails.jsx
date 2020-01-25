@@ -14,7 +14,7 @@ class MovieDetails extends Component {
 
     render() {
         return(
-            <div>
+            <div className="movie-details">
                 <h1>This is the Movie Details component</h1>
                 <CastList />
                 <GenderSummary />

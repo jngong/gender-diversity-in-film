@@ -1,11 +1,11 @@
 import React from "react"
 
 function MovieButton(props) {
-
+    const {id, title} = props.movie
     return(
-        <div className="movie-button">
-            <h2>This will be a link to a movie.</h2>
-        </div>
+            <div className="movie-button">
+                <h2>{title}</h2>
+            </div>        
     )
 }
 
