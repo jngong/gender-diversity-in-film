@@ -5,7 +5,7 @@ function MovieButton(props) {
     const imageURL = 'https://image.tmdb.org/t/p/w185/'
 
     return(
-            <div className="movie-button" onClick={() => props.handleClick(id)}>
+            <div className="movie-button">
                 <img src={`${imageURL}${poster_path}`} alt={title}/>
                 <h2>{title}</h2>
             </div>        

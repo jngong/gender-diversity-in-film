@@ -7,7 +7,7 @@ function MovieList(props) {
     return (
         <div className="movie-list">
             {props.movieList && props.movieList.map((movie, i) => {
-                return (i < 10) && <Link to={`/${movie.id}`} ><MovieButton key={i} movie={movie} handleClick={props.handleClick}/></Link>
+                return (i < 10) && <Link to={`/${movie.id}`} ><MovieButton key={i} movie={movie}/></Link>
             })}
         </div>
     )

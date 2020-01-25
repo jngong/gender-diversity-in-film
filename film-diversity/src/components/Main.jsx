@@ -11,14 +11,7 @@ class Main extends Component {
         this.state = {
             movieList: [],
             searchTerm: '',
-            selectedMovieId: ''
         }
-    }
-
-    handleClick = (id) => {
-        this.setState({
-            selectedMovieId: id
-        })
     }
 
     async componentDidMount() {
