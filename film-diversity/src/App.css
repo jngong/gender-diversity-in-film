@@ -7,3 +7,11 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
+.movie-button {
+  width: 200px;
+  border: 1px solid black;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}
