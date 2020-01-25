@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 import {getMovieDetails} from "../services/api-helper"
-import CastList from "./CastList"
+import CreditsList from "./CreditsList"
 import GenderSummary from "./GenderSummary"
 import BechdelTest from "./BechdelTest"
 
@@ -48,7 +48,7 @@ class MovieDetails extends Component {
         return(
             <div className="movie-details">
                 <h1>{this.state.currentMovie.title}</h1>
-                <CastList currentMovie={this.state.currentMovie} femaleCast={this.state.femaleCast} maleCast={this.state.maleCast}/>
+                <CreditsList currentMovie={this.state.currentMovie} femaleCast={this.state.femaleCast} maleCast={this.state.maleCast}/>
                 <GenderSummary currentMovie={this.state.currentMovie}/>
                 <BechdelTest currentMovie={this.state.currentMovie} />
             </div>

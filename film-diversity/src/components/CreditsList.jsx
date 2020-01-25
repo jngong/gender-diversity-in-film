@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CastList(props) {
+function CreditsList(props) {
     console.log('Cast List', props)
 
     const imgURL = 'https://image.tmdb.org/t/p/w185'
@@ -43,7 +43,7 @@ function CastList(props) {
 
 }
 
-export default CastList
+export default CreditsList
 
 /* 
 Image base URL for profile image: https://image.tmdb.org/t/p/w185
