@@ -10,7 +10,11 @@ class MovieDetails extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            currentMovie: null
+            currentMovie: null,
+            femaleCast: null,
+            maleCast: null,
+            femaleCrew: null,
+            maleCrew: null
         }
     }
 
@@ -19,17 +23,32 @@ class MovieDetails extends Component {
         this.setState({
             currentMovie: data
         })
+        this.filterCredits()
+    }
+
+    filterCredits = () => {
+        const femaleCast = this.state.currentMovie.credits.cast.filter(member => member.gender === 1)
+        const maleCast = this.state.currentMovie.credits.cast.filter(member => member.gender === 2)
+        const femaleCrew = this.state.currentMovie.credits.crew.filter(member => member.gender === 1)
+        const maleCrew = this.state.currentMovie.credits.crew.filter(member => member.gender === 1)
+
+        this.setState({
+            femaleCast: femaleCast,
+            maleCast: maleCast,
+            femaleCrew: femaleCrew,
+            maleCrew: maleCrew
+        })
+        
     }
 
     render() {
-        console.log(this.state.currentMovie)
         while (this.state.currentMovie === null) {
             return <div>Loading film details...</div>
         }
         return(
             <div className="movie-details">
                 <h1>{this.state.currentMovie.title}</h1>
-                <CastList currentMovie={this.state.currentMovie} />
+                <CastList currentMovie={this.state.currentMovie} femaleCast={this.state.femaleCast} maleCast={this.state.maleCast}/>
                 <GenderSummary currentMovie={this.state.currentMovie}/>
                 <BechdelTest currentMovie={this.state.currentMovie} />
             </div>
