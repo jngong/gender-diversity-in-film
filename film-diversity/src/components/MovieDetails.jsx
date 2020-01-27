@@ -47,7 +47,13 @@ class MovieDetails extends Component {
         }
         return(
             <div className="movie-details">
-                <h1>{this.state.currentMovie.title}</h1>
+                <div className="movie-header">
+                    <h1>{this.state.currentMovie.title}</h1>
+                    <p>{new Date(this.state.currentMovie.release_date).getFullYear()}</p>
+                    <p>{this.state.currentMovie.genres[0].name}</p>
+                    <p>Budget: {this.state.currentMovie.budget}</p>
+                    <p>Revenue: {this.state.currentMovie.revenue}</p>
+                </div>
                 <CreditsList currentMovie={this.state.currentMovie} femaleCast={this.state.femaleCast} maleCast={this.state.maleCast}/>
                 <GenderSummary currentMovie={this.state.currentMovie}/>
                 <BechdelTest currentMovie={this.state.currentMovie} />
