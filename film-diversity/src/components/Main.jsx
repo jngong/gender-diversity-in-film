@@ -42,7 +42,7 @@ class Main extends Component {
         })
     }
 
-//* Define a function to clear the search results and set the state of list display back to 'now playing'
+//* Define a function to clear the search results from Movie List page.
     clearSearchClick = (e) => {
         e.preventDefault();
         this.setState({
