@@ -11,6 +11,7 @@ function MovieList(props) {
         )
     }
     
+    console.log(props.searchList && props.searchList)
     return (
         <div>
             <div className={`movie-list ${props.activeSearch ? '' : 'hide-list'}`}>

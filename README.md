@@ -156,9 +156,9 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 24th| Project Pitch and Approval, Create React App, Components and API calls | In Progress
-|Jan 27th| Build out Main, Search and MovieList for setting state | Incomplete
-|Jan 28th| Build out MovieDetails and logic for GenderCalc and BechdelTest | Incomplete
+|Jan 24th| Project Pitch and Approval, Create React App, Components and API calls | Completed
+|Jan 27th| Build out Main, Search and MovieList for setting state | Completed
+|Jan 28th| Build out MovieDetails and logic for GenderCalc and BechdelTest | In Progress
 |Jan 29th| MVP  | Incomplete
 |Jan 30th| CSS Styling | Incomplete
 |Jan 31st| Presentation | Incomplete
@@ -188,5 +188,5 @@ function reverse(string) {
 ```
 
 ## Change Log
-TBD
- Use this section to document what changes were made in your overall planning and the reasoning behind those changes. 
+1/25 - Removed handleClick method and selectedMovieId state from Main because I decided to get the movie details on MovieDetails component from the URL parameter id rather than a passed state. This way, it will render details when you directly visit the page.
+1/27 - Added a new state for "activeSearch" to main to keep track of search status. When true, MovieList displays search results instead of now playing list; opposite when false. Added a "clear search" button in the Search component to reset the state of the MovieList to its default - showing "Now Playing" movies.
