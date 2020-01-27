@@ -1,6 +1,8 @@
 import React from "react"
 
 function Search(props) {
+
+    // if (props.location)
     return(
         <div className="search-bar">
             <form onSubmit={props.handleSubmit}>
@@ -12,7 +14,7 @@ function Search(props) {
                     value={props.searchTerm}
                     onChange={props.handleChange}
                 />    
-                <button>Find Film</button>
+                <button>Get Results</button>
             </form>
             <button onClick={props.clearSearch} >Clear Search</button>
         </div>

@@ -6,6 +6,7 @@ import { getMoviesNowPlaying, getMoviesBySearch } from "../services/api-helper"
 import { Route, Switch } from 'react-router-dom'
 
 class Main extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
