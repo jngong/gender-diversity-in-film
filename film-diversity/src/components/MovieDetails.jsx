@@ -20,6 +20,7 @@ class MovieDetails extends Component {
         }
     }
 
+// * When component mounts, get movie details based on the url parameter, set state for currentMovie and run a filter of credits.
     async componentDidMount() {
         const data = await getMovieDetails(this.props.match.params.film_id)
         this.setState({
@@ -28,6 +29,7 @@ class MovieDetails extends Component {
         this.filterCredits(data)
     }
 
+//* Define a function to filter credits and set state for each category. This is invoked within the componentDidMount.
     filterCredits = (data) => {
         const femaleCast = data.credits.cast.filter(member => member.gender == 1)
         const maleCast = data.credits.cast.filter(member => member.gender == 2)
@@ -46,18 +48,38 @@ class MovieDetails extends Component {
         })
         
     }
+//* Define a function to calculate the percentage of females in the cast (where gender is known)
+    calculatePercentageFemale = (type) => {
+        let females;
+        let males;
+        
+        if (this.state.femaleCast === null) {
+            return 'no state in females'
+        } 
+        else if (type = 'cast') {
+            females = this.state.femaleCast.length
+            males = this.state.maleCast.length
+        } else if (type = 'crew') {
+            females = this.state.femaleCrew.length
+            males = this.state.maleCrew.length
+        }
+        return (females) ? <p>{`%${(females/(females + males)).toFixed(3) * 100}`}</p> : <p></p>
+    }
 
     render() {
         while (this.state.currentMovie === null) {
             return <div>Loading film details...</div>
         }
+        console.log('female cast %', this.calculatePercentageFemale('cast'))
         return(
             <div className="movie-details">
                 <div className="movie-header">
                     <h1>
                         {this.state.currentMovie.title} ({new Date(this.state.currentMovie.release_date).getFullYear()})
                     </h1>
-                     <p>Budget: {this.state.currentMovie.budget}  |  Revenue: {this.state.currentMovie.revenue}</p>
+                    <p>Budget: {this.state.currentMovie.budget}  |  Revenue: {this.state.currentMovie.revenue}</p>
+                    {/* {this.calculatePercentageFemale('cast')}
+                    {this.calculatePercentageFemale('crew')} */}
                 </div> 
 
                 <div className="movie-gender-summary">
