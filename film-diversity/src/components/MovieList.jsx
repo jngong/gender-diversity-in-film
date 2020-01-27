@@ -10,12 +10,20 @@ function MovieList(props) {
             </div>
         )
     }
-
+    
     return (
-        <div className="movie-list">
-            {props.movieList && props.movieList.map((movie, i) => {
-                return (i < 10) && <Link to={`/${movie.id}`} key={movie.id}><MovieButton movie={movie}/></Link>
-            })}
+        <div>
+            <div className="movie-list">
+                {props.searchList.results && props.searchList.results.map((movie, i) => {
+                    return (i < 5) && <Link to={`${movie.id}`}> <MovieButton movie={movie} /> </Link>
+                })}
+
+            </div>
+            <div className="movie-list">
+                {props.movieList && props.movieList.map((movie, i) => {
+                    return (i < 10) && <Link to={`/${movie.id}`} key={movie.id}><MovieButton movie={movie}/></Link>
+                })}
+            </div>
         </div>
     )
 
