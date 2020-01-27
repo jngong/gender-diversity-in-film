@@ -1,10 +1,16 @@
 import React from "react"
 
 function Search(props) {
-
     return(
         <form>
-            <input type="text" placeholder="Search by film title..."></input>
+            <input 
+                type="text" 
+                placeholder="Search by film title..."
+                autoComplete="off"
+                name="searchFilm"
+                value={props.searchTerm}
+                onChange={props.handleChange}
+            />    
             <button>Find Film</button>
         </form>
     )

@@ -1,7 +1,7 @@
 import React from "react"
 
 function MovieButton(props) {
-    const {poster_path, title, id} = props.movie
+    const {poster_path, title} = props.movie
     const imageURL = 'https://image.tmdb.org/t/p/w185/'
 
     return(

@@ -10,7 +10,9 @@ class Main extends Component {
         super(props)
         this.state = {
             movieList: [],
+            searchList: [],
             searchTerm: '',
+            listDisplay: 'now playing' /* This will toggle between two values: 'now playing' and 'search results'*/
         }
     }
 
@@ -21,10 +23,20 @@ class Main extends Component {
         })
     }
 
+    /* Define a function to handle change on search input field and store in "searchTerm" */
+
+    handleChange = (e) => {
+        this.setState({
+            searchTerm: e.target.value
+        })
+    }
+
+    /* Define a function to handle submit on search button and use it to trigger API call and setState of searchList */
+
     render() {
         return(
             <main>
-                <Search />
+                <Search handleChange={this.handleChange} searchTerm={this.state.searchTerm} />
                 <Switch>
                     <Route 
                         exact path='/' component=
