@@ -45,32 +45,14 @@ class MovieDetails extends Component {
             maleCrew: maleCrew,
             unknownCast: unknownCast,
             unknownCrew: unknownCrew
-        })
-        
-    }
-//* Define a function to calculate the percentage of females in the cast (where gender is known)
-    calculatePercentageFemale = (type) => {
-        let females;
-        let males;
-        
-        if (this.state.femaleCast === null) {
-            return 'no state in females'
-        } 
-        else if (type = 'cast') {
-            females = this.state.femaleCast.length
-            males = this.state.maleCast.length
-        } else if (type = 'crew') {
-            females = this.state.femaleCrew.length
-            males = this.state.maleCrew.length
-        }
-        return (females) ? <p>{`%${(females/(females + males)).toFixed(3) * 100}`}</p> : <p></p>
+        })        
     }
 
     render() {
         while (this.state.currentMovie === null) {
             return <div>Loading film details...</div>
         }
-        console.log('female cast %', this.calculatePercentageFemale('cast'))
+
         return(
             <div className="movie-details">
                 <div className="movie-header">
@@ -78,12 +60,17 @@ class MovieDetails extends Component {
                         {this.state.currentMovie.title} ({new Date(this.state.currentMovie.release_date).getFullYear()})
                     </h1>
                     <p>Budget: {this.state.currentMovie.budget}  |  Revenue: {this.state.currentMovie.revenue}</p>
-                    {/* {this.calculatePercentageFemale('cast')}
-                    {this.calculatePercentageFemale('crew')} */}
+                    <p>{this.state.castPercent}</p>
                 </div> 
 
                 <div className="movie-gender-summary">
-                    <GenderSummary currentMovie={this.state.currentMovie}/>
+                    <GenderSummary 
+                        currentMovie={this.state.currentMovie}
+                        femaleCast={this.state.femaleCast} 
+                        maleCast={this.state.maleCast}
+                        femaleCrew={this.state.femaleCrew}
+                        maleCrew={this.state.maleCrew}
+                    />
                     <BechdelTest currentMovie={this.state.currentMovie} />
                 </div>
 
