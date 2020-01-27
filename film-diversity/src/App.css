@@ -7,7 +7,7 @@
 }
 
 /* *********** Search Component Styles  *********** */
-form {
+.search-bar {
   margin-bottom: 30px;
 }
 
@@ -25,11 +25,28 @@ form > button {
   border-radius: 5px;
 }
 
+.search-bar > button {
+  margin-top: 5px;
+  background-color: #eee;
+  color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
 /* *********** Movie List Component Styles  *********** */
 .movie-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  background-color: #eee;
+}
+
+.hide-list {
+  display: none;
+}
+
+.movie-list h2 {
+  width: 98%;
 }
 
 .movie-button {

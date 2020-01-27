@@ -13,7 +13,7 @@ function CreditsList(props) {
    const femaleCast = props.femaleCast.map((person) => {
        return (
         <div className="cast-member">
-            <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
+            <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name}/>
             <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
         </div>           
        )
