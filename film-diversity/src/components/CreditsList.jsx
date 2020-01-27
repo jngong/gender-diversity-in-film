@@ -1,4 +1,5 @@
 import React from 'react'
+import PersonImage from '../images/person-placeholder-185x278.png'
 
 function CreditsList(props) {
     console.log('Cast List', props)
@@ -12,8 +13,8 @@ function CreditsList(props) {
    const femaleCast = props.femaleCast.map((person) => {
        return (
         <div className="cast-member">
-            <img src={`${imgURL}${person.profile_path}`} alt={person.name} />
-            <p>{person.name}, "{person.character}"</p>
+            <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
+            <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
         </div>           
        )
    }) 
@@ -21,8 +22,8 @@ function CreditsList(props) {
    const maleCast = props.maleCast.map((person) => {
         return (
         <div className="cast-member">
-            <img src={`${imgURL}${person.profile_path}`} alt={person.name} />
-            <p>{person.name}, "{person.character}"</p>
+            <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
+            <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
         </div>           
         )
     }) 
@@ -47,4 +48,5 @@ export default CreditsList
 
 /* 
 Image base URL for profile image: https://image.tmdb.org/t/p/w185
+src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`}
 */

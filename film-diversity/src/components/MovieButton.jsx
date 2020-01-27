@@ -1,4 +1,5 @@
 import React from "react"
+import FilmImage from "../images/film-placeholder-185x278.png"
 
 function MovieButton(props) {
     const {poster_path, title} = props.movie
@@ -6,7 +7,7 @@ function MovieButton(props) {
 
     return(
             <div className="movie-button">
-                <img src={`${imageURL}${poster_path}`} alt={title}/>
+                <img src={poster_path ? `${imageURL}${poster_path}` : `${FilmImage}`} alt={title}/>
                 <h2>{title}</h2>
             </div>        
     )
