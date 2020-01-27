@@ -3,6 +3,13 @@ import MovieButton from "./MovieButton"
 import {Link} from "react-router-dom"
 
 function MovieList(props) {
+    if (!props.searchList.length && !props.movieList.length) {
+        return (
+            <div>
+                No movies to display.
+            </div>
+        )
+    }
 
     return (
         <div className="movie-list">

@@ -12,7 +12,7 @@ class Main extends Component {
             movieList: [],
             searchList: [],
             searchTerm: '',
-            listDisplay: 'now playing' /* This will toggle between two values: 'now playing' and 'search results'*/
+            listDisplay: 'now playing' //* This will toggle between two values: 'now playing' and 'search results'
         }
     }
 
@@ -23,27 +23,36 @@ class Main extends Component {
         })
     }
 
-    /* Define a function to handle change on search input field and store in "searchTerm" */
-
+//* Define a function to handle change on search input field and store in "searchTerm"
     handleChange = (e) => {
         this.setState({
             searchTerm: e.target.value
         })
     }
 
-    /* Define a function to handle submit on search button and use it to trigger API call and setState of searchList */
+//* Define a function to handle submit on search button and use it to trigger API call and setState of searchList
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        let data = await getMoviesBySearch(this.state.searchTerm)
+        // console.log(data)
+        this.setState({
+            searchList: data
+        })
+
+    }
 
     render() {
         return(
             <main>
-                <Search handleChange={this.handleChange} searchTerm={this.state.searchTerm} />
+                <Search handleChange={this.handleChange} handleSubmit={this.handleSubmit} searchTerm={this.state.searchTerm} />
                 <Switch>
                     <Route 
                         exact path='/' component=
                             {props => <MovieList 
                                 {...props} 
                                 movieList={this.state.movieList} 
-                                handleClick={this.handleClick} 
+                                searchList={this.state.searchList}
+                                // handleClick={this.handleClick} 
                             />}
                     />
                     <Route exact path = '/:film_id' component={props => <MovieDetails {...props} />} />

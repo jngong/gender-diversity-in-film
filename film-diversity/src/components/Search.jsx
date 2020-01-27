@@ -2,7 +2,7 @@ import React from "react"
 
 function Search(props) {
     return(
-        <form>
+        <form onSubmit={props.handleSubmit}>
             <input 
                 type="text" 
                 placeholder="Search by film title..."
