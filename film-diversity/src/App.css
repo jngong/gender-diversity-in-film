@@ -63,6 +63,16 @@ form > button {
 
 /* *********** Movie Details Component Styles  *********** */
 
+.movie-gender-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+
+
 .credits-list {
   display: flex;
   flex-flow: row wrap;

@@ -34,6 +34,7 @@ class MovieDetails extends Component {
         const femaleCast = data.credits.cast.filter(member => member.gender == 1)
         const maleCast = data.credits.cast.filter(member => member.gender == 2)
         const unknownCast = data.credits.cast.filter(member => member.gender == 0)
+
         const femaleCrew = data.credits.crew.filter(member => member.gender == 1)
         const maleCrew = data.credits.crew.filter(member => member.gender == 2)
         const unknownCrew = data.credits.crew.filter(member => member.gender == 0)
@@ -49,7 +50,7 @@ class MovieDetails extends Component {
     }
 
     render() {
-        while (this.state.currentMovie === null) {
+        if (this.state.currentMovie === null) {
             return <div>Loading film details...</div>
         }
 

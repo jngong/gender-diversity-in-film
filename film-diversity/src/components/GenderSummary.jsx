@@ -2,7 +2,8 @@ import React from "react"
 
 function GenderSummary(props) {
 
-    if (props.femaleCast === null) {
+//* Conditional statement in case states are undefined when passed down
+    if (props.femaleCast === null && props.femaleCrew === null) {
         return <div></div>
     }
 
@@ -10,10 +11,6 @@ function GenderSummary(props) {
     let femaleCast = props.femaleCast.length
     let maleCast = props.maleCast.length
     let castCalculation = (femaleCast/(femaleCast + maleCast)).toFixed(2) * 100
-
-    if (props.femaleCrew === null) {
-        return <div></div>
-    }
 
     let femaleCrew = props.femaleCrew.length
     let maleCrew = props.maleCrew.length
