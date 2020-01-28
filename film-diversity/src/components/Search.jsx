@@ -7,6 +7,7 @@ function Search(props) {
     if (props.location.pathname.match(`/${props.currentMovie}`) && props.match.isExact === false) {
         return null;
     }
+    
     return(
         <div className="search-bar">
             <form onSubmit={props.handleSubmit}>
