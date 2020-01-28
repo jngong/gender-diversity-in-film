@@ -54,13 +54,21 @@ class MovieDetails extends Component {
             return <div>Loading film details...</div>
         }
 
+        function formatNumber(number) {
+            const newNum = parseInt(number)
+            return new Intl.NumberFormat('en-US').format(newNum)
+        }
+
+        const budget = formatNumber(this.state.currentMovie.budget)
+        const revenue = formatNumber(this.state.currentMovie.revenue)
+        
         return(
             <div className="movie-details">
                 <div className="movie-header">
                     <h1>
                         {this.state.currentMovie.title} ({new Date(this.state.currentMovie.release_date).getFullYear()})
                     </h1>
-                    <p>Budget: {this.state.currentMovie.budget}  |  Revenue: {this.state.currentMovie.revenue}</p>
+                    <p>Budget: ${budget} | Revenue: ${revenue}</p>
                     <p>{this.state.castPercent}</p>
                 </div> 
 
