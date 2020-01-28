@@ -138,17 +138,17 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create Boilerplate for components | H | 2hrs| tbd | tbd |
-| Set up API call functions | H | 2hrs| tbd | tbd |
-| Set up Routes for MovieList and MovieDetails in App | H | 2hrs | tbd | tbd |
-| Set up Main component with event functions and state | H | 2hrs | tbd | tbd |
-| Create form on Search and enable event methods  | H | 2hrs | tbd | tbd |
-| Set up MovieList map and enable MovieButton links | H | 4hrs | tbd | tbd |
-| Set up MovieDetails and ensure router works  | H | 3hrs| tbd | tbd |
-| Create logic for GenderCalc of cast and crew and display result | H | 4hrs| tbd | tbd |
-| Bechdel Test data API call and display result  | L | 3hrs| tbd | tbd |
-| Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| tbd | tbd |
-| CSS styling - desktop  | M | 4hrs| tbd | tbd |
+| Create Boilerplate for components | H | 2hrs| 1hr | 1hr |
+| Set up API call functions | H | 2hrs| 3hrs | 3hrs |
+| Set up Routes for MovieList and MovieDetails in App | H | 2hrs | 2hrs | 2hrs |
+| Set up Main component with event functions and state | H | 2hrs | 1hr | 1hr |
+| Create form on Search and enable event methods  | H | 2hrs | 3hrs | 3hrs |
+| Set up MovieList map and enable MovieButton links | H | 4hrs | 3hrs | 3hrs |
+| Set up MovieDetails and ensure router works  | H | 3hrs| 1hr | 1hr |
+| Create logic for GenderCalc of cast and crew and display result | H | 4hrs| 3hrs | 3hrs |
+| Bechdel Test data API call and display result  | L | 3hrs| 2hrs | tbd |
+| Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| 3hrs | 3hrs |
+| CSS styling - desktop  | M | 4hrs| 3hrs | tbd |
 | CSS styling - mobile | M | 2hrs| tbd | tbd |
 | Total | H | 33hrs| tbd | tbd |
 
@@ -158,8 +158,8 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 |---|---| ---|
 |Jan 24th| Project Pitch and Approval, Create React App, Components and API calls | Completed
 |Jan 27th| Build out Main, Search and MovieList for setting state | Completed
-|Jan 28th| Build out MovieDetails and logic for GenderCalc and BechdelTest | In Progress
-|Jan 29th| MVP  | Incomplete
+|Jan 28th| Build out MovieDetails and logic for GenderCalc and BechdelTest | Completed
+|Jan 29th| MVP  | Completed
 |Jan 30th| CSS Styling | Incomplete
 |Jan 31st| Presentation | Incomplete
 
@@ -188,5 +188,6 @@ function reverse(string) {
 ```
 
 ## Change Log
-1/25 - Removed handleClick method and selectedMovieId state from Main because I decided to get the movie details on MovieDetails component from the URL parameter id rather than a passed state. This way, it will render details when you directly visit the page.
-1/27 - Added a new state for "activeSearch" to main to keep track of search status. When true, MovieList displays search results instead of now playing list; opposite when false. Added a "clear search" button in the Search component to reset the state of the MovieList to its default - showing "Now Playing" movies.
+- 1/25 - Removed handleClick method and selectedMovieId state from Main because I decided to get the movie details on MovieDetails component from the URL parameter id rather than a passed state. This way, it will render details when you directly visit the page.
+- 1/27 - Added a new state for "activeSearch" to main to keep track of search status. When true, MovieList displays search results instead of now playing list; opposite when false. Added a "clear search" button in the Search component to reset the state of the MovieList to its default - showing "Now Playing" movies.
+- 1/27 - Converted the Bechdel Test component from functional to class to accommodate the API call for rating data and declare a state for the imdb id.
