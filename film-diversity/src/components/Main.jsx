@@ -76,7 +76,8 @@ class Main extends Component {
                     handleSubmit={this.handleSubmit} 
                     searchTerm={this.state.searchTerm} 
                     clearSearch={this.clearSearchClick}
-                    currentMovie={this.state.currentMovie} 
+                    currentMovie={this.state.currentMovie}
+                    activeSearch={this.state.activeSearch} 
                 />
                 <Switch>
                     <Route 

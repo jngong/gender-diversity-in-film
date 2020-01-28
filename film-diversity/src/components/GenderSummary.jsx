@@ -22,14 +22,14 @@ function GenderSummary(props) {
                 <div className="label">Female Cast: </div>
                 <div className="full-bar">
                     <div className="percentage-fill" style={{width : `${castCalculation}%`}}></div>
-                    <div>~{castCalculation}% </div>
+                    <div>{castCalculation}% </div>
                 </div>
             </div>
             <div className="female-crew-summary">
                 <div className="label">Female Crew: </div>
                 <div className="full-bar">
                     <div className="percentage-fill" style={{width : `${crewCalculation}%`}}></div>
-                    <div>~{crewCalculation}% </div>
+                    <div>{crewCalculation}% </div>
                 </div>
             </div>
             <cite>Note: % figures do not account for cast or    crew members whose genders are not declared.</cite>

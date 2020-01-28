@@ -20,7 +20,7 @@ function Search(props) {
                 />    
                 <button>Get Results</button>
             </form>
-            <button onClick={props.clearSearch} >Clear Search</button>
+            {props.activeSearch ? <button onClick={props.clearSearch}>Clear Search</button> : null}
         </div>
 
     )
