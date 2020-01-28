@@ -18,7 +18,7 @@ function MovieList(props) {
             <div className={`movie-list ${props.activeSearch ? '' : 'hide-list'}`}>
                 <h2>Search Results</h2>
                 {props.searchList.results && props.searchList.results.map((movie, i) => {
-                    return (i < 10) && <Link to={`${movie.id}`}> <MovieButton movie={movie} /> </Link>
+                    return (i < 10) && <Link to={`${movie.id}`}> <MovieButton movie={movie} handleClick={props.handleClick}/> </Link>
                 })}
 
             </div>
