@@ -7,7 +7,7 @@ class BechdelTest extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            bechdelRating: ''
+            bechdelRating: undefined
         }
     }
 
@@ -21,12 +21,16 @@ class BechdelTest extends Component {
     
     render(props) {
 
-        return(
-            <div className="bechdel-test">
-            <h3>Bechdel Test</h3>
-            <p>{this.props.currentMovie.title} passes {this.state.bechdelRating && this.state.bechdelRating} out of 3 criteria.</p>
-        </div>
-        )
+        if (this.state.bechdelRating !== undefined) {
+            return(
+                <div className="bechdel-test">
+                <h3>Bechdel Test</h3>
+                <p>{this.props.currentMovie.title} passes {this.state.bechdelRating && this.state.bechdelRating} out of 3 criteria.</p>
+            </div>
+            )
+        } else {
+            return null
+        }
     }
 }
 

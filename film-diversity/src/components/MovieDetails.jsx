@@ -53,7 +53,8 @@ class MovieDetails extends Component {
         if (this.state.currentMovie === null) {
             return <div>Loading film details...</div>
         }
-
+        
+//* Source for how to convert numbers via this link: https://www.geeksforgeeks.org/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript/
         function formatNumber(number) {
             const newNum = parseInt(number)
             return new Intl.NumberFormat('en-US').format(newNum)
@@ -68,8 +69,7 @@ class MovieDetails extends Component {
                     <h1>
                         {this.state.currentMovie.title} ({new Date(this.state.currentMovie.release_date).getFullYear()})
                     </h1>
-                    <p>Budget: ${budget} | Revenue: ${revenue}</p>
-                    <p>{this.state.castPercent}</p>
+                    <p style={{display : 'inline-block'}}>Budget: ${budget} </p> <p style={{display : 'inline-block'}}> Revenue: ${revenue}</p>
                 </div> 
 
                 <div className="movie-gender-summary">
