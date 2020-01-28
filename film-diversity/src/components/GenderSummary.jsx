@@ -32,7 +32,7 @@ function GenderSummary(props) {
                     <div>{crewCalculation}% </div>
                 </div>
             </div>
-            <cite>Note: % figures do not account for cast or    crew members whose genders are not declared.</cite>
+            <cite>Note: % figures do not account for cast or crew members whose genders are not declared.</cite>
         </div>
     )
 }
