@@ -13,7 +13,8 @@ class Main extends Component {
             movieList: [],
             searchList: [],
             searchTerm: '',
-            activeSearch: false
+            activeSearch: false,
+            currentMovie: ''
         }
     }
 
@@ -21,6 +22,15 @@ class Main extends Component {
         let data = await getMoviesNowPlaying();
         this.setState({
             movieList: data.results
+        })
+    }
+
+
+//* Define a function to handle click on movie button to set the state of currentMovie which will be passed into the search bar for hiding on render of a movie details page.
+
+    handleClick = (id) => {
+        this.setState({
+            currentMovie: id
         })
     }
 
@@ -60,7 +70,8 @@ class Main extends Component {
                     handleChange={this.handleChange} 
                     handleSubmit={this.handleSubmit} 
                     searchTerm={this.state.searchTerm} 
-                    clearSearch={this.clearSearchClick} 
+                    clearSearch={this.clearSearchClick}
+                    currentMovie={this.state.currentMovie} 
                 />
                 <Switch>
                     <Route 
@@ -69,7 +80,8 @@ class Main extends Component {
                                 {...props} 
                                 movieList={this.state.movieList} 
                                 searchList={this.state.searchList}
-                                activeSearch={this.state.activeSearch} 
+                                activeSearch={this.state.activeSearch}
+                                handleClick={this.handleClick} 
                             />}
                     />
                     <Route exact path = '/:film_id' component={props => <MovieDetails {...props} />} />
@@ -80,9 +92,3 @@ class Main extends Component {
 }
 
 export default Main
-
-/* 
-API call for search results:
-        let searchResults = await getMoviesBySearch(this.state.searchTerm);
-        console.log(searchResults.results)
-*/

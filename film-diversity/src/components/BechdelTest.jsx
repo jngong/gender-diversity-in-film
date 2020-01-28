@@ -1,6 +1,8 @@
 import React, {Component} from "react"
 import {getBechdelTest} from "../services/api-helper"
 
+/* // TODO: Need to do conditional rendering on the return. If there is no result from the API call, then the whole thing should return empty  */
+
 class BechdelTest extends Component {
     constructor(props) {
         super(props)

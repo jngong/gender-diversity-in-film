@@ -12,6 +12,7 @@ function MovieList(props) {
     }
     
     console.log(props.searchList && props.searchList)
+
     return (
         <div>
             <div className={`movie-list ${props.activeSearch ? '' : 'hide-list'}`}>
@@ -24,7 +25,7 @@ function MovieList(props) {
             <div className={`movie-list ${props.activeSearch ? 'hide-list' : ''}`}>
                 <h2>Now Playing</h2>
                 {props.movieList && props.movieList.map((movie, i) => {
-                    return (i < 10) && <Link to={`/${movie.id}`} key={movie.id}><MovieButton movie={movie}/></Link>
+                    return (i < 10) && <Link to={`/${movie.id}`} key={movie.id}><MovieButton movie={movie} handleClick={props.handleClick}/></Link>
                 })}
             </div>
         </div>

@@ -1,8 +1,12 @@
 import React from "react"
+import { withRouter } from "react-router-dom"
 
 function Search(props) {
+    console.log(props.currentMovie)
 
-    // if (props.location)
+    if (props.location.pathname === `/${props.currentMovie}`) {
+        return null;
+    }
     return(
         <div className="search-bar">
             <form onSubmit={props.handleSubmit}>
@@ -22,4 +26,4 @@ function Search(props) {
     )
 }
 
-export default Search
+export default withRouter(Search)
