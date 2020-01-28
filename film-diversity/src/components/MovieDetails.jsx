@@ -31,13 +31,13 @@ class MovieDetails extends Component {
 
 //* Define a function to filter credits and set state for each category. This is invoked within the componentDidMount.
     filterCredits = (data) => {
-        const femaleCast = data.credits.cast.filter(member => member.gender == 1)
-        const maleCast = data.credits.cast.filter(member => member.gender == 2)
-        const unknownCast = data.credits.cast.filter(member => member.gender == 0)
+        const femaleCast = data.credits.cast.filter(member => member.gender === 1)
+        const maleCast = data.credits.cast.filter(member => member.gender === 2)
+        const unknownCast = data.credits.cast.filter(member => member.gender === 0)
 
-        const femaleCrew = data.credits.crew.filter(member => member.gender == 1)
-        const maleCrew = data.credits.crew.filter(member => member.gender == 2)
-        const unknownCrew = data.credits.crew.filter(member => member.gender == 0)
+        const femaleCrew = data.credits.crew.filter(member => member.gender === 1)
+        const maleCrew = data.credits.crew.filter(member => member.gender === 2)
+        const unknownCrew = data.credits.crew.filter(member => member.gender === 0)
 
         this.setState({
             femaleCast: femaleCast,
@@ -54,7 +54,7 @@ class MovieDetails extends Component {
             return <div>Loading film details...</div>
         }
         
-//* Source for how to convert numbers via this link: https://www.geeksforgeeks.org/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript/
+        //* Source for how to convert numbers via this link: https://www.geeksforgeeks.org/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript/
         function formatNumber(number) {
             const newNum = parseInt(number)
             return new Intl.NumberFormat('en-US').format(newNum)

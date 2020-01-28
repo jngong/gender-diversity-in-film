@@ -2,7 +2,7 @@ import React from 'react'
 import PersonImage from '../images/person-placeholder-185x278.png'
 
 function CreditsList(props) {
-    console.log('Credits List', props)
+    // console.log('Credits List', props)
 
     const imgURL = 'https://image.tmdb.org/t/p/w185'
 
@@ -11,9 +11,9 @@ function CreditsList(props) {
     }
 
 //* Mapping through the array of female cast members passed down as props from MovieDetails component.
-   const femaleCast = props.femaleCast.map((person) => {
+   const femaleCast = props.femaleCast.map((person, i) => {
        return (
-        <div className="cast-member">
+        <div className="cast-member" key={i}>
             <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name}/>
             <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
         </div>           
@@ -22,9 +22,9 @@ function CreditsList(props) {
 
 //* Mapping through the array of male cast members passed down as props from MovieDetails component. 
 // TODO: This is not DRY code. Will need to refactor later.
-   const maleCast = props.maleCast.map((person) => {
+   const maleCast = props.maleCast.map((person, i) => {
         return (
-        <div className="cast-member">
+        <div className="cast-member" key={i}>
             <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
             <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
         </div>           
@@ -33,9 +33,9 @@ function CreditsList(props) {
 
 //* Mapping through the array of cast members who don't have an identified gender passed down as props from MovieDetails component. 
 // TODO: This is not DRY code. Will need to refactor later.
-const unknownCast = props.unknownCast.map((person) => {
+const unknownCast = props.unknownCast.map((person, i) => {
     return (
-    <div className="cast-member">
+    <div className="cast-member" key={i}>
         <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
         <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
     </div>           
@@ -44,9 +44,9 @@ const unknownCast = props.unknownCast.map((person) => {
 
 //* Mapping through the array of crew members who don't have an identified gender passed down as props from MovieDetails component. 
 // TODO: This is not DRY code. Will need to refactor later.
-const unknownCrew = props.unknownCrew.map((person) => {
+const unknownCrew = props.unknownCrew.map((person, i) => {
     return (
-    <div className="cast-member">
+    <div className="cast-member" key={i}>
         <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
         <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
     </div>           
@@ -55,9 +55,9 @@ const unknownCrew = props.unknownCrew.map((person) => {
 
 //* Mapping through the array of female crew  members passed down as props from MovieDetails component. 
 // TODO: This is not DRY code. Will need to refactor later.
-    const femaleCrew = props.femaleCrew.map((person) => {
+    const femaleCrew = props.femaleCrew.map((person, i) => {
         return (
-        <div className="cast-member">
+        <div className="cast-member" key={i}>
             <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
             <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
         </div>           
@@ -66,9 +66,9 @@ const unknownCrew = props.unknownCrew.map((person) => {
 
 //* Mapping through the array of male crew  members passed down as props from MovieDetails component. 
 // TODO: This is not DRY code. Will need to refactor later.
-    const maleCrew = props.maleCrew.map((person) => {
+    const maleCrew = props.maleCrew.map((person, i) => {
         return (
-        <div className="cast-member">
+        <div className="cast-member" key={i}>
             <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
             <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
         </div>           

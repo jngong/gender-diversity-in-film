@@ -2,7 +2,6 @@ import React from "react"
 import { withRouter } from "react-router-dom"
 
 function Search(props) {
-    console.log(props.currentMovie)
 
     if (props.location.pathname.match(`/${props.currentMovie}`) && props.match.isExact === false) {
         return null;
