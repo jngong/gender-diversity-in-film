@@ -68,12 +68,19 @@ class MovieDetails extends Component {
         const backdropBaseURL = 'https://image.tmdb.org/t/p/w1280/'
         return(
             <div className="movie-details">
-                <div className="movie-header" style={{backgroundImage:`url(${backdropBaseURL}${backdrop_path})`}}>
-                    <h1>
-                        {title} ({new Date(release_date).getFullYear()})
-                    </h1>
-                    <p style={{display : 'inline-block'}}>Budget: ${formattedBudget} </p> <p style={{display : 'inline-block'}}> Revenue: ${formattedRevenue}</p>
-                </div> 
+
+                <div className="movie-header">
+
+                    <img src={`${backdropBaseURL}${backdrop_path}`} alt={title}/>
+
+                    <div className="movie-header-details" /* style={{backgroundImage:`url(${backdropBaseURL}${backdrop_path})`}} */>
+                        <h1>
+                            {title} ({new Date(release_date).getFullYear()})
+                        </h1>
+                        <p>Budget: ${formattedBudget} </p> 
+                        <p className="last">Revenue: ${formattedRevenue}</p>
+                    </div> 
+                </div>
 
                 <div className="movie-gender-summary">
                     <GenderSummary 

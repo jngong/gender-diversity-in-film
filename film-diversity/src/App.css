@@ -1,5 +1,9 @@
-* {
-  /* border: 1px dashed blue; */
+/* * {
+  border: 1px dashed blue;
+} */
+
+body {
+  box-sizing: border-box;
 }
 
 .App {
@@ -65,19 +69,48 @@ form > button {
 /* *********** Movie Details Component Styles  *********** */
 
 .movie-header {
+  height: 250px;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.movie-header-details {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  height: 30vh;
+  height: 100%;
+  width: 100%;
   color: white;
-  padding: 2% 5%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-left: 3%;
+  background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0.2) 10%,
+		rgba(0, 0, 0, 1)
+  );
 }
 
-.movie-header > h1, .movie-header > p {
+.movie-header > img {
+  width: 100%
+}
+
+.movie-header-details > h1 {
+  line-height: 2rem;
   margin: 5px 0;
+}
+
+.movie-header-details > p {
+  margin: .2rem 0;
+}
+.movie-header-details > p.last {
+  margin-bottom: 1rem;
 }
 
 .movie-gender-summary {
