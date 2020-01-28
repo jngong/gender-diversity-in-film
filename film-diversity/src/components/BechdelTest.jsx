@@ -12,6 +12,9 @@ class BechdelTest extends Component {
     }
 
     async componentDidMount() {
+        if (!this.props.currentMovie.imdb_id) {
+            return
+        }
         const cleanId = this.props.currentMovie.imdb_id.slice(2)
         const data = await getBechdelTest(cleanId)
         this.setState({

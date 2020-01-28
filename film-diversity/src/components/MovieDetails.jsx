@@ -54,7 +54,7 @@ class MovieDetails extends Component {
             return <div>Loading film details...</div>
         }
             
-        const {title, budget, revenue, release_date, backdrop_path} = this.state.currentMovie
+        const {title, budget, revenue, release_date, backdrop_path, tagline} = this.state.currentMovie
 
         //* Source for how to convert numbers via this link: https://www.geeksforgeeks.org/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript/
         function formatNumber(number) {
@@ -71,14 +71,13 @@ class MovieDetails extends Component {
 
                 <div className="movie-header">
 
-                    <img src={`${backdropBaseURL}${backdrop_path}`} alt={title}/>
+                    {backdrop_path ? <img src={`${backdropBaseURL}${backdrop_path}`} alt={title}/> : null}
 
-                    <div className="movie-header-details" /* style={{backgroundImage:`url(${backdropBaseURL}${backdrop_path})`}} */>
-                        <h1>
-                            {title} ({new Date(release_date).getFullYear()})
-                        </h1>
-                        <p>Budget: ${formattedBudget} </p> 
-                        <p className="last">Revenue: ${formattedRevenue}</p>
+                    <div className="movie-header-details">
+                        <h1>{title} ({release_date ? `${new Date(release_date).getFullYear()}` : null})</h1>
+                        <h4 style={{fontStyle : 'italic'}}>{tagline}</h4>
+                        {budget !== 0 ? <p>Budget: ${formattedBudget}</p> : null} 
+                        {revenue !== 0 ? <p className="last">Revenue: ${formattedRevenue}</p> : <p className="last"></p>}
                     </div> 
                 </div>
 

@@ -69,7 +69,7 @@ form > button {
 /* *********** Movie Details Component Styles  *********** */
 
 .movie-header {
-  height: 250px;
+  height: 275px;
   width: 100vw;
   position: relative;
   background-size: cover;
@@ -80,6 +80,7 @@ form > button {
   margin-bottom: 5px;
 }
 
+/* Pulled guidance from react-router lesson starter code - used same background gradient. */
 .movie-header-details {
   position: absolute;
   display: flex;
@@ -104,6 +105,10 @@ form > button {
 .movie-header-details > h1 {
   line-height: 2rem;
   margin: 5px 0;
+}
+
+.movie-header-details > h4 {
+  margin: .5rem 0;
 }
 
 .movie-header-details > p {

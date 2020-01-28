@@ -10,7 +10,7 @@ function MovieButton(props) {
             <div className="movie-button" onClick={() => {props.handleClick(id)}}>
                 <img src={poster_path ? `${imageURL}${poster_path}` : `${FilmImage}`} alt={title}/>
                 <h2>{title}</h2>
-                <p> {`(${year})`}</p>
+                <p> {release_date ? `(${year})` : null}</p>
             </div>        
     )
 }
