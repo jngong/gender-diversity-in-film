@@ -45,6 +45,11 @@ class Main extends Component {
 //* Upon submit, this also sets the state for listDisplay to show the search results.
     handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!this.state.searchTerm) {
+            alert('Please enter a film title to search.')
+            return
+        }
         let data = await getMoviesBySearch(this.state.searchTerm)
 
         this.setState({
