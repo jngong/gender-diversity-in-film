@@ -53,23 +53,26 @@ class MovieDetails extends Component {
         if (this.state.currentMovie === null) {
             return <div>Loading film details...</div>
         }
-        
+            
+        const {title, budget, revenue, release_date, backdrop_path} = this.state.currentMovie
+
         //* Source for how to convert numbers via this link: https://www.geeksforgeeks.org/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript/
         function formatNumber(number) {
             const newNum = parseInt(number)
             return new Intl.NumberFormat('en-US').format(newNum)
         }
 
-        const budget = formatNumber(this.state.currentMovie.budget)
-        const revenue = formatNumber(this.state.currentMovie.revenue)
+        const formattedBudget = formatNumber(budget)
+        const formattedRevenue = formatNumber(revenue)
         
+        const backdropBaseURL = 'https://image.tmdb.org/t/p/w1280/'
         return(
             <div className="movie-details">
-                <div className="movie-header">
+                <div className="movie-header" style={{backgroundImage:`url(${backdropBaseURL}${backdrop_path})`}}>
                     <h1>
-                        {this.state.currentMovie.title} ({new Date(this.state.currentMovie.release_date).getFullYear()})
+                        {title} ({new Date(release_date).getFullYear()})
                     </h1>
-                    <p style={{display : 'inline-block'}}>Budget: ${budget} </p> <p style={{display : 'inline-block'}}> Revenue: ${revenue}</p>
+                    <p style={{display : 'inline-block'}}>Budget: ${formattedBudget} </p> <p style={{display : 'inline-block'}}> Revenue: ${formattedRevenue}</p>
                 </div> 
 
                 <div className="movie-gender-summary">

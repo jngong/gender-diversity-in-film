@@ -64,6 +64,22 @@ form > button {
 
 /* *********** Movie Details Component Styles  *********** */
 
+.movie-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 30vh;
+  color: white;
+  padding: 2% 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.movie-header > h1, .movie-header > p {
+  margin: 5px 0;
+}
+
 .movie-gender-summary {
   display: flex;
   flex-direction: row;
@@ -71,8 +87,6 @@ form > button {
   align-items: center;
   border: 1px solid gray;
 }
-
-
 
 .credits-list {
   display: flex;
