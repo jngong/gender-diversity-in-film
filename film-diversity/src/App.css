@@ -1,18 +1,19 @@
-/* * {
-  border: 1px dashed blue;
-} */
-
-body {
-  box-sizing: border-box;
+* {
+  /* border: 1px dashed blue; */
 }
+
+/* *********** Global Styles  *********** */
 
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
 }
+/* *********** Header and Footer Component Styles  *********** */
+
 
 /* *********** Search Component Styles  *********** */
 .search-bar {
@@ -67,7 +68,9 @@ form > button {
 }
 
 /* *********** Movie Details Component Styles  *********** */
+/* Pulled guidance from react-router lesson starter code - used same background gradient as that project. */
 
+/* ******* Movie Header  ******* */
 .movie-header {
   height: 275px;
   width: 100vw;
@@ -77,10 +80,12 @@ form > button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin-bottom: 5px;
 }
 
-/* Pulled guidance from react-router lesson starter code - used same background gradient. */
+.movie-header > img {
+  width: 100%
+}
+
 .movie-header-details {
   position: absolute;
   display: flex;
@@ -96,10 +101,6 @@ form > button {
 		rgba(255, 255, 255, 0.2) 10%,
 		rgba(0, 0, 0, 1)
   );
-}
-
-.movie-header > img {
-  width: 100%
 }
 
 .movie-header-details > h1 {
@@ -118,13 +119,54 @@ form > button {
   margin-bottom: 1rem;
 }
 
+/* ******* Gender Summary ******* */
 .movie-gender-summary {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   border: 1px solid gray;
 }
+
+.gender-summary-container, .bechdel-test {
+  width: 48%;
+  line-height: 30px;
+  text-align: left;
+}
+
+.female-cast-summary, .female-crew-summary {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.label {
+  width: 20%;
+  font-weight: bold;
+}
+
+.full-bar {
+  width: 50%;
+  height: 25px;
+  border: 1px solid black;
+  /* background-color: white; */
+  margin: 5px 15px 5px 5px;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2%;
+}
+
+.percentage-fill {
+  height: 100%;
+  background-color: gold;
+  border-radius: 0 5px 5px 0;
+}
+
+/* ******* Credits List ******* */
 
 .credits-list {
   display: flex;

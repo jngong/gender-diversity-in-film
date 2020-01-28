@@ -82,6 +82,7 @@ class MovieDetails extends Component {
                 </div>
 
                 <div className="movie-gender-summary">
+                    <h2 style={{width: '100%'}}>Gender Representation Summary</h2>
                     <GenderSummary 
                         currentMovie={this.state.currentMovie}
                         femaleCast={this.state.femaleCast} 

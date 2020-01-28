@@ -27,9 +27,11 @@ class BechdelTest extends Component {
         if (this.state.bechdelRating !== undefined) {
             return(
                 <div className="bechdel-test">
-                <h3>Bechdel Test</h3>
-                <p>{this.props.currentMovie.title} passes {this.state.bechdelRating && this.state.bechdelRating} out of 3 criteria.</p>
-            </div>
+                    <h3>Bechdel Test</h3>
+                    <p>
+                        {this.props.currentMovie.title} passes {this.state.bechdelRating} out of 3 criteria.
+                    </p>
+                </div>
             )
         } else {
             return null
