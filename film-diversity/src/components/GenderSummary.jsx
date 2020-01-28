@@ -10,11 +10,11 @@ function GenderSummary(props) {
 //* Define a function to calculate the percentage of females in the cast (where gender is known)        
     let femaleCast = props.femaleCast.length
     let maleCast = props.maleCast.length
-    let castCalculation = (femaleCast/(femaleCast + maleCast)).toFixed(2) * 100
+    let castCalculation = ((femaleCast/(femaleCast + maleCast)) * 100).toFixed(0)
 
     let femaleCrew = props.femaleCrew.length
     let maleCrew = props.maleCrew.length
-    let crewCalculation = (femaleCrew/(femaleCrew + maleCrew)).toFixed(2) * 100
+    let crewCalculation = ((femaleCrew/(femaleCrew + maleCrew)) * 100).toFixed(0)
 
     return(
         <div className="gender-summary">
