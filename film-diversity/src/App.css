@@ -43,7 +43,7 @@ header {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 70px 70px 10px 30px;
+  padding: 3rem 2rem 0;
   text-align: left;
   background-color: var(--alt-background-color);
   color: var(--contrast-text-color);
@@ -51,7 +51,7 @@ header {
 
 header h1 {
   font-size: 2.8rem;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-style: normal;
   font-weight: 700;
 }
@@ -70,11 +70,11 @@ header a:hover {
 
 .description {
   width: 70%;
-  margin: 30px auto 10px auto;
+  margin: 2rem auto;
 }
 
 .search-bar {
-  margin: 30px 0;
+  margin: 2rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -83,23 +83,23 @@ header a:hover {
 
 .search-bar button {
   width: 150px;
-  padding: 5px 30px;
+  padding: .5rem 1rem;
   border-radius: 5px;
   outline: none;
   border: none;
+  letter-spacing: 1px;
 }
 
 input {
-  width: 250px;
-  margin-right: 10px;
-  padding: 5px 10px;
+  width: 300px;
+  margin-right: 1rem;
+  padding: .5rem 1rem;
 }
 
 form > button {
   background-color: var(--main-background-color);
   color: var(--contrast-text-color);
-  font-weight: 600;
-  margin-right: 50px;
+  margin-right: 2rem;
 }
 
 .search-bar > button {
@@ -113,7 +113,7 @@ form > button {
   flex-flow: row wrap;
   justify-content: space-around;
   background-color: var(--alt-background-color);
-  padding-bottom: 4rem;
+  padding: 0  5rem 4rem;
 }
 
 .hide-list {
@@ -131,13 +131,12 @@ form > button {
 
 .movie-button {
   width: 200px;
-  margin: 20px;
-  padding: 10px;
+  margin: 1.5rem;
   text-align: center;
 }
 
 .movie-list h3, .movie-list p {
-  margin: 5px 0;
+  margin: .5rem 0;
 }
 
 .movie-list a {
@@ -176,7 +175,7 @@ form > button {
   height: 100%;
   width: 100%;
   color: var(--contrast-text-color);
-  padding-left: 3%;
+  padding-left: 2rem;
   background: linear-gradient(
 		to bottom,
 		rgba(255, 255, 255, 0.2) 10%,
@@ -186,7 +185,7 @@ form > button {
 
 .movie-header-details > h1 {
   line-height: 2rem;
-  margin: 5px 0;
+  margin: .5rem 0;
 }
 
 .movie-header-details > h4 {
@@ -194,14 +193,10 @@ form > button {
   font-size: 1.1rem;
   letter-spacing: 1px;
   font-style: italic;
-  font-weight: 600;
 }
 
 .movie-header-details > p {
   margin: .2rem 0;
-}
-.movie-header-details > p.last {
-  margin-bottom: 1rem;
 }
 
 /* ******* Gender Summary ******* */
@@ -236,7 +231,6 @@ form > button {
 .bechdel-result-container {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -270,7 +264,6 @@ form > button {
 }
 
 .emoji {
-  /* width: 30%; */
   text-align: left;
   font-size: 4.5rem;
   margin: 1px 2rem 1px .5rem;
@@ -325,7 +318,7 @@ form > button {
 
 .credits-list > h3 {
   width: 100%;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   margin: 0 auto;
   background-color: var(--alt-background-color);
   color: var(--contrast-text-color);
@@ -341,17 +334,17 @@ form > button {
   justify-content: flex-start;
   border: 1px solid var(--contrast-accent-color-2);
   border-radius: 5px;
-  padding: 0 10px;
-  margin: 1rem 0;
+  padding: 1rem;
+  margin: .5rem;
 }
 
 .members h2 {
   width: 100%;
-  margin: 0 auto;
-  padding: 20px 0;
+  margin: 1rem auto;
 }
 
 .members p {
+  width: 100%;
   margin-bottom: .5rem;
   letter-spacing: 0;
   font-size: .8rem;
@@ -359,11 +352,12 @@ form > button {
 
 .cast-member {
   width: 22%;
-  margin: .4rem;
+  margin: .5rem;
 }
 
 .cast-member img {
   width: 100%;
+  margin-bottom: .2rem;
 }
 
 /* *********** Footer Component Styles  *********** */
@@ -374,8 +368,7 @@ footer {
 
 footer p {
   font-family: 'Archivo Narrow', sans-serif;
-  font-weight: 600;
-  margin-top: 5px;
+  margin-top: .5rem;
 }
 
 footer a {
@@ -391,6 +384,148 @@ footer hr {
   margin: 0 auto 2rem auto;
 }
 
+/* *********** Breakpoint for Mobile devices (width < 600px)  *********** */
+
 @media only screen and (max-width: 600px) {
+
+  .App {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  header {
+    padding: 1rem;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
   
+  header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .description {
+    width: 90%;
+    line-height: 1.1rem;
+  }
+
+  .search-bar {
+    margin: 1rem 0;
+    flex-direction: column;
+  }
+
+  input {
+    width: 80%;
+    margin: .5rem 0;
+    border: 1px solid var(--contrast-accent-color);
+  }
+
+  .search-bar button, .search-bar > button {
+    width: 10rem;
+    margin: .2rem 0;
+  }
+
+  .movie-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .movie-list h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: .5rem auto;
+  }
+
+  .movie-header {
+    height: 30vh;
+  }
+
+  .movie-header-details {
+    padding-left: 0;
+  }
+
+  .movie-header-details > h1, .movie-header-details > p, .movie-header-details > h4 {
+    padding: 0 2rem;
+    line-height: unset;
+    margin: .2rem 0;
+  }
+
+  /* **** Gender Representation Summary Section **** */
+  .movie-gender-summary {
+    padding: 1rem 0;
+    flex-direction: column;
+  }
+
+  .movie-gender-summary h2 {
+    font-size: 1.3rem;
+    padding: 0 .3rem; 
+  }
+
+  .gender-summary-container, .bechdel-test {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .female-cast-summary, .female-crew-summary {
+    justify-content: center;
+  }
+
+  .label {
+    width: 25%;
+  }
+
+  .full-bar {
+    width: 60%;
+  }
+
+  /* **** Bechdel Test Component **** */
+
+  .bechdel-test h3 {
+    text-align: center;
+  }
+
+  .bechdel-result-container {
+    justify-content: center;
+  }
+
+  .emoji {
+    margin: 1rem;
+  }
+
+  /* **** Credits List Component **** */
+  .credits-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .credits-list h3 {
+    padding: 1rem 0;
+  }
+
+  .members {
+    width: 80vw;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .cast-member {
+    width: 20%;
+    margin: .3rem;
+  }
+
+  /* **** Footer Component **** */
+
+  footer hr {
+    width: 100%;
+  }
+
+  footer {
+    padding: 0 1rem 2rem 1rem;
+  }
+
 }

@@ -77,12 +77,12 @@ class MovieDetails extends Component {
                         <h1>{title} ({release_date ? `${new Date(release_date).getFullYear()}` : null})</h1>
                         <h4>{tagline}</h4>
                         {budget !== 0 ? <p>Budget: ${formattedBudget}</p> : null} 
-                        {revenue !== 0 ? <p className="last">Revenue: ${formattedRevenue}</p> : <p className="last"></p>}
+                        {revenue !== 0 ? <p>Revenue: ${formattedRevenue}</p> : <p className="last"></p>}
                     </div> 
                 </div>
 
                 <div className="movie-gender-summary">
-                    <h2 style={{width: '100%'}}>Gender Representation Summary</h2>
+                    <h2>Gender Representation Summary</h2>
                     <GenderSummary 
                         currentMovie={this.state.currentMovie}
                         femaleCast={this.state.femaleCast} 

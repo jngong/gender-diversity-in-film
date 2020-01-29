@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import {getBechdelTest} from "../services/api-helper"
 
-//* FYI, CORS plugin needs to be active for the Bechdel Test API results to render.
 
 class BechdelTest extends Component {
     constructor(props) {
@@ -25,10 +24,9 @@ class BechdelTest extends Component {
     displayRating() {
         switch(this.state.bechdelRating) {
             case 0:
-                console.log('Bechdel Rating 0', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
-                        <div className="emoji"><i className="far fa-frown"></i></div>
+                        <div className="emoji"><i className="fas fa-frown"></i></div>
                         <ul>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
@@ -36,12 +34,11 @@ class BechdelTest extends Component {
                         </ul>
                     </div>
                 );
-            break;
+
             case 1:
-                console.log('Bechdel Rating 1', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
-                        <div className="emoji"><i className="far fa-meh"></i></div>
+                        <div className="emoji"><i className="fas fa-meh"></i></div>
                         <ul>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
@@ -49,12 +46,10 @@ class BechdelTest extends Component {
                         </ul>
                     </div>
                 );
-            break;
             case 2: 
-                console.log('Bechdel Rating 2', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
-                        <div className="emoji"><i className="far fa-meh"></i></div>
+                        <div className="emoji"><i className="fas fa-meh"></i></div>
                         <ul>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
@@ -62,12 +57,10 @@ class BechdelTest extends Component {
                         </ul>
                     </div>
                 );
-            break;
             case 3: 
-                console.log('Bechdel Rating 3', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
-                        <div className="emoji"><i className="far fa-grin-hearts"></i></div>
+                        <div className="emoji"><i className="fas fa-grin-hearts"></i></div>
                         <ul>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
@@ -75,9 +68,7 @@ class BechdelTest extends Component {
                         </ul>
                     </div>
                 );
-            break;
             default:
-                console.log('no rating', this.state.bechdelRating)
                 return  null 
         }
     }
@@ -98,3 +89,8 @@ class BechdelTest extends Component {
 }
 
 export default BechdelTest
+
+/* 
+//* FYI, CORS plugin needs to be active for the Bechdel Test API results to render.
+//* In the Switch statement, originally had a 'break;' after each case but was getting a yellow warning about "unreachable code". Realized this was happening because I had a return in each case and the expression stops on a return.
+*/

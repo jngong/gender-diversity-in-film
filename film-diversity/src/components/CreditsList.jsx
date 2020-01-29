@@ -2,7 +2,6 @@ import React from 'react'
 import PersonImage from '../images/person-placeholder-185x278.png'
 
 function CreditsList(props) {
-    // console.log('Credits List', props)
 
     const imgURL = 'https://image.tmdb.org/t/p/w185'
 
@@ -119,6 +118,5 @@ const unknownCrew = props.unknownCrew.map((person, i) => {
 export default CreditsList
 
 /* 
-Image base URL for profile image: https://image.tmdb.org/t/p/w185
-src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`}
+    TODO: Note that each mapping of credits members by gender is not DRY and will want to refactor it later.
 */
