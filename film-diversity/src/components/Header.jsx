@@ -1,15 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
-function Header() {
+function Header(props) {
+
+    if (props.location.pathname.match(`/`) && props.match.isExact === true) {
+        return (
+            <header>
+                <h1>Gender Diversity in Film</h1>
+            </header>
+        )
+    }
+
     return (
         <header>
             <h1>Gender Diversity in Film</h1>
             <Link exact="true" activeclassname="active" to="/">
-                Home
+                <i class="fas fa-arrow-left"></i> Back
             </Link>
         </header>
     )
 }
 
-export default Header
+export default withRouter(Header)

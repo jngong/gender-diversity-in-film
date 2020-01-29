@@ -348,7 +348,7 @@ form button:hover {
   border: 1px solid var(--contrast-accent-color-2);
   border-radius: 5px;
   padding: 1rem;
-  margin: .5rem;
+  margin: .5rem .3rem;
 }
 
 .members h2 {
@@ -364,7 +364,7 @@ form button:hover {
 }
 
 .cast-member {
-  width: 22%;
+  width: 20%;
   margin: .5rem;
 }
 
@@ -413,7 +413,7 @@ footer hr {
   /* **** Header Component **** */
   header {
     padding: 1rem;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
   }
   

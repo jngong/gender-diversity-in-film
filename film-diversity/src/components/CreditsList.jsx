@@ -105,7 +105,7 @@ function CreditsList(props) {
                 </div>
                 <div className="members gender-not-identified">
                     <h2>Additional Crew Members: {props.unknownCrew.length}</h2>
-                    <p>These crew members are not identified as female or male in the database</p>
+                    <p>These crew members are not identified as female or male in the database.</p>
                     {unknownCrew}
                 </div>
             </div>
