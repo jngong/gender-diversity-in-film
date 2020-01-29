@@ -270,9 +270,10 @@ form > button {
 }
 
 .emoji {
-  width: 30%;
+  /* width: 30%; */
   text-align: left;
   font-size: 4.5rem;
+  margin: 1px 2rem 1px .5rem;
 }
 
 .female-cast-summary, .female-crew-summary {

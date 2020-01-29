@@ -28,12 +28,12 @@ class BechdelTest extends Component {
                 console.log('Bechdel Rating 0', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
+                        <div className="emoji"><i className="far fa-frown"></i></div>
                         <ul>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
                         </ul>
-                        <div className="emoji"><i className="far fa-frown"></i></div>
                     </div>
                 );
             break;
@@ -41,12 +41,12 @@ class BechdelTest extends Component {
                 console.log('Bechdel Rating 1', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
+                        <div className="emoji"><i className="far fa-meh"></i></div>
                         <ul>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
                         </ul>
-                        <div className="emoji"><i className="far fa-meh"></i></div>
                     </div>
                 );
             break;
@@ -54,12 +54,12 @@ class BechdelTest extends Component {
                 console.log('Bechdel Rating 2', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
+                        <div className="emoji"><i className="far fa-meh"></i></div>
                         <ul>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
                             <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
                         </ul>
-                        <div className="emoji"><i className="far fa-meh"></i></div>
                     </div>
                 );
             break;
@@ -67,12 +67,12 @@ class BechdelTest extends Component {
                 console.log('Bechdel Rating 3', this.state.bechdelRating);
                 return (
                     <div className="bechdel-result-container">
+                        <div className="emoji"><i className="far fa-grin-hearts"></i></div>
                         <ul>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
                             <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
                         </ul>
-                        <div className="emoji"><i className="far fa-grin-hearts"></i></div>
                     </div>
                 );
             break;
