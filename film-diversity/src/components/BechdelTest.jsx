@@ -1,5 +1,5 @@
-import React, {Component} from "react"
-import {getBechdelTest} from "../services/api-helper"
+import React, { Component } from "react"
+import { getBechdelTest } from "../services/api-helper"
 
 
 class BechdelTest extends Component {
@@ -20,9 +20,9 @@ class BechdelTest extends Component {
             bechdelRating: data.rating
         })
     }
-    
+
     displayRating() {
-        switch(this.state.bechdelRating) {
+        switch (this.state.bechdelRating) {
             case 0:
                 return (
                     <div className="bechdel-result-container">
@@ -46,7 +46,7 @@ class BechdelTest extends Component {
                         </ul>
                     </div>
                 );
-            case 2: 
+            case 2:
                 return (
                     <div className="bechdel-result-container">
                         <div className="emoji"><i className="fas fa-meh"></i></div>
@@ -57,7 +57,7 @@ class BechdelTest extends Component {
                         </ul>
                     </div>
                 );
-            case 3: 
+            case 3:
                 return (
                     <div className="bechdel-result-container">
                         <div className="emoji"><i className="fas fa-grin-hearts"></i></div>
@@ -69,14 +69,14 @@ class BechdelTest extends Component {
                     </div>
                 );
             default:
-                return  null 
+                return null
         }
     }
 
     render(props) {
 
         if (this.state.bechdelRating !== undefined) {
-            return(
+            return (
                 <div className="bechdel-test">
                     <h3>Does this pass the Bechdel Test?</h3>
                     {this.displayRating()}
@@ -90,7 +90,7 @@ class BechdelTest extends Component {
 
 export default BechdelTest
 
-/* 
+/*
 //* FYI, CORS plugin needs to be active for the Bechdel Test API results to render.
 //* In the Switch statement, originally had a 'break;' after each case but was getting a yellow warning about "unreachable code". Realized this was happening because I had a return in each case and the expression stops on a return.
 */

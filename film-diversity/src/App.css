@@ -94,6 +94,7 @@ input {
   width: 300px;
   margin-right: 1rem;
   padding: .5rem 1rem;
+  outline: none;
 }
 
 form > button {
@@ -102,9 +103,21 @@ form > button {
   margin-right: 2rem;
 }
 
-.search-bar > button {
+form button:hover {
+  background-color: var(--contrast-accent-color-2);
+  box-shadow: 2px 2px 1px var(--contrast-accent-color);
+  color: var(--dark-text-color);
+}
+
+.clear-search {
   background-color: var(--contrast-accent-color-2);
   color: var(--alt-background-color); 
+}
+
+.clear-search:hover {
+  background-color: var(--main-background-color);
+  box-shadow: 2px 2px 1px var(--alt-background-color);
+  color: var(--contrast-text-color);
 }
 
 /* *********** Movie List Component Styles  *********** */
@@ -396,7 +409,8 @@ footer hr {
     font-size: 1.5rem;
     letter-spacing: 1px;
   }
-
+  
+  /* **** Header Component **** */
   header {
     padding: 1rem;
     flex-direction: column-reverse;
@@ -407,7 +421,8 @@ footer hr {
     font-size: 1.5rem;
     letter-spacing: 1px;
   }
-  
+
+  /* **** Search Component **** */
   .description {
     width: 90%;
     line-height: 1.1rem;
@@ -424,11 +439,12 @@ footer hr {
     border: 1px solid var(--contrast-accent-color);
   }
 
-  .search-bar button, .search-bar > button {
+  .search-bar button {
     width: 10rem;
     margin: .2rem 0;
   }
 
+  /* **** Movie List Component **** */
   .movie-list {
     flex-direction: column;
     align-items: center;
@@ -441,6 +457,7 @@ footer hr {
     margin: .5rem auto;
   }
 
+  /* **** Movie Details Component **** */
   .movie-header {
     height: 30vh;
   }

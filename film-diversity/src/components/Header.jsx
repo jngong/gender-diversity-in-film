@@ -1,12 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Header() {
-    return(
+    return (
         <header>
             <h1>Gender Diversity in Film</h1>
-            <Link exact="true" activeclassname="active" to="/"> 
-                Home 
+            <Link exact="true" activeclassname="active" to="/">
+                Home
             </Link>
         </header>
     )
