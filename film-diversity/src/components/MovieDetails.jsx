@@ -75,7 +75,7 @@ class MovieDetails extends Component {
 
                     <div className="movie-header-details">
                         <h1>{title} ({release_date ? `${new Date(release_date).getFullYear()}` : null})</h1>
-                        <h4 style={{fontStyle : 'italic'}}>{tagline}</h4>
+                        <h4>{tagline}</h4>
                         {budget !== 0 ? <p>Budget: ${formattedBudget}</p> : null} 
                         {revenue !== 0 ? <p className="last">Revenue: ${formattedRevenue}</p> : <p className="last"></p>}
                     </div> 

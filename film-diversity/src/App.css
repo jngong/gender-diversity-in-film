@@ -7,6 +7,8 @@
   --contrast-accent-color: #FFD300;
   --dark-text-color: #1F2D3A;
   --contrast-accent-color-2: #FAC11C;
+  --red-icon-color: #F51825;
+  --green-icon-color: #00C29E;
 }
 
 .App {
@@ -111,6 +113,7 @@ form > button {
   flex-flow: row wrap;
   justify-content: space-around;
   background-color: var(--alt-background-color);
+  padding-bottom: 4rem;
 }
 
 .hide-list {
@@ -120,7 +123,7 @@ form > button {
 .movie-list h2 {
   width: 98%;
   color: var(--contrast-text-color);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 3px;
@@ -188,6 +191,10 @@ form > button {
 
 .movie-header-details > h4 {
   margin: .5rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .movie-header-details > p {
@@ -205,13 +212,67 @@ form > button {
   align-items: center;
   background-color: var(--main-background-color);
   color: var(--contrast-text-color);
-  padding: 1.5rem 0;
+  padding: 2rem 0;
+}
+
+.movie-gender-summary h2 {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .gender-summary-container, .bechdel-test {
   width: 45%;
-  line-height: 2rem;
   text-align: left;
+}
+
+/* ******* Bechdel Test ******* */
+.bechdel-test h3 {
+  margin: 0 auto;
+  color: var(--contrast-accent-color)
+}
+
+.bechdel-result-container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.bechdel-test ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: .6rem 0;
+  width: 60%;
+}
+
+.bechdel-test li {
+  line-height: 1.6em;
+  letter-spacing: .5px;
+}
+
+.fa-times-circle, .fa-check-circle {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.fa-check-circle, .fa-grin-hearts {
+  color: var(--green-icon-color);
+}
+
+.fa-times-circle, .fa-frown {
+  color: var(--red-icon-color);
+}
+
+.fa-meh {
+  color: var(--contrast-accent-color);
+}
+
+.emoji {
+  width: 30%;
+  text-align: left;
+  font-size: 4.5rem;
 }
 
 .female-cast-summary, .female-crew-summary {
@@ -306,13 +367,29 @@ form > button {
 
 /* *********** Footer Component Styles  *********** */
 
+footer {
+  margin-bottom: 2rem;
+}
+
 footer p {
   font-family: 'Archivo Narrow', sans-serif;
   font-weight: 600;
+  margin-top: 5px;
+}
+
+footer a {
+  color: var(--contrast-accent-color-2);
+}
+
+footer a:hover {
+  color: var(--dark-text-color);
 }
 
 footer hr {
-  width: 98%;
-  border: 1px solid var(--contrast-accent-color-2);
-  margin: 2rem auto;
+  border: 5px solid var(--contrast-accent-color-2);
+  margin: 0 auto 2rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+  
 }

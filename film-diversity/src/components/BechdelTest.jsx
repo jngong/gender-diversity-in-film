@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import {getBechdelTest} from "../services/api-helper"
 
-/* // TODO: Need to do conditional rendering on the return. If there is no result from the API call, then the whole thing should return empty  */
+//* FYI, CORS plugin needs to be active for the Bechdel Test API results to render.
 
 class BechdelTest extends Component {
     constructor(props) {
@@ -22,15 +22,73 @@ class BechdelTest extends Component {
         })
     }
     
+    displayRating() {
+        switch(this.state.bechdelRating) {
+            case 0:
+                console.log('Bechdel Rating 0', this.state.bechdelRating);
+                return (
+                    <div className="bechdel-result-container">
+                        <ul>
+                            <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
+                            <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
+                            <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
+                        </ul>
+                        <div className="emoji"><i className="far fa-frown"></i></div>
+                    </div>
+                );
+            break;
+            case 1:
+                console.log('Bechdel Rating 1', this.state.bechdelRating);
+                return (
+                    <div className="bechdel-result-container">
+                        <ul>
+                            <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
+                            <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
+                            <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
+                        </ul>
+                        <div className="emoji"><i className="far fa-meh"></i></div>
+                    </div>
+                );
+            break;
+            case 2: 
+                console.log('Bechdel Rating 2', this.state.bechdelRating);
+                return (
+                    <div className="bechdel-result-container">
+                        <ul>
+                            <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
+                            <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
+                            <li><i className="fas fa-times-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
+                        </ul>
+                        <div className="emoji"><i className="far fa-meh"></i></div>
+                    </div>
+                );
+            break;
+            case 3: 
+                console.log('Bechdel Rating 3', this.state.bechdelRating);
+                return (
+                    <div className="bechdel-result-container">
+                        <ul>
+                            <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;At least two women in cast...</li>
+                            <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;Who speak to each other...</li>
+                            <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;About something other than a man.</li>
+                        </ul>
+                        <div className="emoji"><i className="far fa-grin-hearts"></i></div>
+                    </div>
+                );
+            break;
+            default:
+                console.log('no rating', this.state.bechdelRating)
+                return  null 
+        }
+    }
+
     render(props) {
 
         if (this.state.bechdelRating !== undefined) {
             return(
                 <div className="bechdel-test">
-                    <h3>Bechdel Test</h3>
-                    <p>
-                        {this.props.currentMovie.title} passes {this.state.bechdelRating} out of 3 criteria.
-                    </p>
+                    <h3>Does this pass the Bechdel Test?</h3>
+                    {this.displayRating()}
                 </div>
             )
         } else {

@@ -26,7 +26,7 @@ class Main extends Component {
     }
 
 
-//* Define a function to handle click on movie button to set the state of currentMovie which will be passed into the search bar for hiding on render of a movie details page.
+    //* Define a function to handle click on movie button to set the state of currentMovie which will be passed into the search bar for hiding on render of a movie details page.
 
     handleClick = (id) => {
         this.setState({
@@ -34,15 +34,15 @@ class Main extends Component {
         })
     }
 
-//* Define a function to handle change on search input field and store in "searchTerm"
+    //* Define a function to handle change on search input field and store in "searchTerm"
     handleChange = (e) => {
         this.setState({
             searchTerm: e.target.value
         })
     }
 
-//* Define a function to handle submit on search button and use it to trigger API call and setState of searchList.
-//* Upon submit, this also sets the state for listDisplay to show the search results.
+    //* Define a function to handle submit on search button and use it to trigger API call and setState of searchList.
+    //* Upon submit, this also sets the state for listDisplay to show the search results.
     handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -58,7 +58,7 @@ class Main extends Component {
         })
     }
 
-//* Define a function to clear the search results from Movie List page.
+    //* Define a function to clear the search results from Movie List page.
     clearSearchClick = (e) => {
         e.preventDefault();
         this.setState({
@@ -69,28 +69,28 @@ class Main extends Component {
     }
 
     render() {
-        return(
+        return (
             <main>
-                <Search 
-                    handleChange={this.handleChange} 
-                    handleSubmit={this.handleSubmit} 
-                    searchTerm={this.state.searchTerm} 
+                <Search
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    searchTerm={this.state.searchTerm}
                     clearSearch={this.clearSearchClick}
                     currentMovie={this.state.currentMovie}
-                    activeSearch={this.state.activeSearch} 
+                    activeSearch={this.state.activeSearch}
                 />
                 <Switch>
-                    <Route 
+                    <Route
                         exact path='/' component=
-                            {props => <MovieList 
-                                {...props} 
-                                movieList={this.state.movieList} 
-                                searchList={this.state.searchList}
-                                activeSearch={this.state.activeSearch}
-                                handleClick={this.handleClick} 
-                            />}
+                        {props => <MovieList
+                            {...props}
+                            movieList={this.state.movieList}
+                            searchList={this.state.searchList}
+                            activeSearch={this.state.activeSearch}
+                            handleClick={this.handleClick}
+                        />}
                     />
-                    <Route exact path = '/:film_id' component={props => <MovieDetails {...props} />} />
+                    <Route exact path='/:film_id' component={props => <MovieDetails {...props} />} />
                 </Switch>
             </main>
         )
