@@ -146,10 +146,10 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 | Set up MovieList map and enable MovieButton links | H | 4hrs | 3hrs | 3hrs |
 | Set up MovieDetails and ensure router works  | H | 3hrs| 1hr | 1hr |
 | Create logic for GenderCalc of cast and crew and display result | H | 4hrs| 3hrs | 3hrs |
-| Bechdel Test data API call and display result  | L | 3hrs| 2hrs | tbd |
+| Bechdel Test data API call and display result  | L | 3hrs| 3hrs | 3hrs |
 | Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| 3hrs | 3hrs |
-| CSS styling - desktop  | M | 4hrs| 3hrs | tbd |
-| CSS styling - mobile | M | 2hrs| tbd | tbd |
+| CSS styling - desktop  | M | 4hrs| 6hrs | 6hrs |
+| CSS styling - mobile | M | 2hrs| 3hrs | 3hrs |
 | Total | H | 33hrs| tbd | tbd |
 
 ## Project Schedule
@@ -160,7 +160,7 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 |Jan 27th| Build out Main, Search and MovieList for setting state | Completed
 |Jan 28th| Build out MovieDetails and logic for GenderCalc and BechdelTest | Completed
 |Jan 29th| MVP  | Completed
-|Jan 30th| CSS Styling | Incomplete
+|Jan 30th| CSS Styling | Completed
 |Jan 31st| Presentation | Incomplete
 
 ## Additional Libraries
@@ -170,21 +170,45 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 ## Issues and Resolutions
 
-I can foresee potential issues with fetching query data from the TMDB API as there is a lot that can come back with each call and traversing through could get complicated. Also, I plan on using 2 or 3 separate endpoints to call data from the API and match through the id. My resolution will be to be as descriptive and distinctive as I can be with naming for my states and functions so as not to confuse the purpose of each.
+- Issue 1: How to hide the Search component based on route: As I progressed, I realized that it was confusing to keep the search bar visible when the user landed on a details page. However, because my Search component wasn't explicitly nested under my Movie List component, I had trouble figuring out how to hide it on the Movie Details component. I did some Google research and discovered the "withRouter" method within react router dom. After some trial and error with the match syntax, I was able to get this to work.
 
-Another issue I foresee is with my movieList component. I plan on doing an initial fetch of data based on a pre-set list of “top movies” for the homepage and use conditional rendering when a search result is done. This might force me to create a separate component for that purpose so as not to confuse my API calls. 
-
-Within MovieDetails, I think I will need to add more components for the different sections of that page, but was running into way too many components so will assess when I get to that step.
+- Issue 2: My movie details component requires me to filter through the credits twice based on gender (once for cast and once for crew), then each is mapped 3 times for displaying the credits separated by gender group. I had trouble getting this logic to be DRY and so just copied and pasted the code for it to work. I plan to go back and refactor this code.
 
 ## Code Snippet
 
-TBD
-Use this section to include a brief code snippet you are proud of, along with a brief description of why.
+I used "withRouter" from React Router Dom to conditionally display my search component via Route. Completely new to me and a result of an effective Google search along with some trial and error to get it working.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+import { withRouter } from "react-router-dom"
+
+function Search(props) {
+    if (props.location.pathname.match(`/${props.currentMovie}`) && props.match.isExact === false) {
+        return null;
+    }    
+    return(
+        <div>
+            <div className="description">
+                <p>...text...</p>
+            </div>
+            <div className="search-bar">
+                <form onSubmit={props.handleSubmit}>
+                    <input 
+                        type="text" 
+                        placeholder="Search by film title..."
+                        autoComplete="off"
+                        name="searchFilm"
+                        value={props.searchTerm}
+                        onChange={props.handleChange}
+                    />    
+                    <button>Get Results</button>
+                </form>
+                {props.activeSearch ? <button onClick={props.clearSearch}>Clear Search</button> : null}
+            </div>
+        </div>
+    )
 }
+
+export default withRouter(Search)
 ```
 
 ## Change Log
