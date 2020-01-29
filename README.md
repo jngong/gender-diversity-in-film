@@ -1,5 +1,5 @@
 # Project Overview
-
+![Winter Themed GIF](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj19Lem9qnnAhXfj3IEHZZ_AsoQjRx6BAgBEAQ&url=https%3A%2F%2Fgifer.com%2Fen%2F4yY3&psig=AOvVaw1Z_Aq0XkzfebdWBVWEhcSw&ust=1580425602181842)
 
 ## Gender Diversity in Film
 
@@ -145,12 +145,12 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 | Create form on Search and enable event methods  | H | 2hrs | 3hrs | 3hrs |
 | Set up MovieList map and enable MovieButton links | H | 4hrs | 3hrs | 3hrs |
 | Set up MovieDetails and ensure router works  | H | 3hrs| 1hr | 1hr |
-| Create logic for GenderCalc of cast and crew and display result | H | 4hrs| 3hrs | 3hrs |
+| Create logic for GenderCalc of cast and crew and display result | H | 4hrs| 4hrs | 4hrs |
 | Bechdel Test data API call and display result  | L | 3hrs| 3hrs | 3hrs |
 | Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| 3hrs | 3hrs |
 | CSS styling - desktop  | M | 4hrs| 6hrs | 6hrs |
 | CSS styling - mobile | M | 2hrs| 3hrs | 3hrs |
-| Total | H | 33hrs| tbd | tbd |
+| Total | H | 33hrs| 33hrs | 33hrs |
 
 ## Project Schedule
 
