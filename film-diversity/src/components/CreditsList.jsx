@@ -106,7 +106,7 @@ const unknownCrew = props.unknownCrew.map((person, i) => {
                 </div>
                 <div className="members gender-not-identified">
                     <h2>Additional Crew Members: {props.unknownCrew.length}</h2>
-                    <p style={{fontStyle: 'italic'}}>These crew members are not identified as female or male in the database</p>
+                    <p>These crew members are not identified as female or male in the database</p>
                     {unknownCrew}
                 </div>
             </div>
