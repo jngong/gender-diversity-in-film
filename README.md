@@ -1,5 +1,5 @@
 # Project Overview
-![Winter Themed GIF](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj19Lem9qnnAhXfj3IEHZZ_AsoQjRx6BAgBEAQ&url=https%3A%2F%2Fgifer.com%2Fen%2F4yY3&psig=AOvVaw1Z_Aq0XkzfebdWBVWEhcSw&ust=1580425602181842)
+![Winter Themed GIF](https://i.gifer.com/4yY3.gif)
 
 ## Gender Diversity in Film
 
