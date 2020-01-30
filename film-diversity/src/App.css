@@ -329,7 +329,7 @@ form button:hover {
   align-items: flex-start;
 }
 
-.credits-list > h3 {
+.credits-header {
   width: 100%;
   padding: 1.5rem 0;
   margin: 0 auto;
@@ -338,6 +338,14 @@ form button:hover {
   text-transform: capitalize;
   font-size: 1.5rem;
   letter-spacing: 1px;
+  border-bottom: 2px solid var(--contrast-accent-color);
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 2rem;
+
 }
 
 .members {

@@ -41,12 +41,12 @@ function CreditsList(props) {
     return (
         <div>
             <div className="credits-list cast">
-                <h3>
-                    Who's who in the cast?
-                    <span onClick={() => handleClick('cast')} >
+                <div className="credits-header">
+                    <span>Who's who in the cast?</span>
+                    <span className="icon" onClick={() => handleClick('cast')} >
                         <i className={castVisibility ? "far fa-minus-square" : "far fa-plus-square"}></i>
                     </span>
-                </h3>
+                </div>
                 <CastMembers 
                     femaleCast={props.femaleCast} 
                     maleCast={props.maleCast} 
@@ -55,13 +55,13 @@ function CreditsList(props) {
                     castVisibility={castVisibility}
                 />
             </div>
-            <div className="credits-list crew">
-                <h3>
-                    Who's who in the crew?
-                    <span onClick={() => handleClick('crew')}>
+            <div className="credits-list">
+                <div className="credits-header">
+                    <span>Who's who in the crew?</span>
+                    <span  className="icon" onClick={() => handleClick('crew')}>
                         <i className={crewVisibility ? "far fa-minus-square" : "far fa-plus-square"}></i>
                     </span>
-                </h3>
+                </div>
                 <CrewMembers 
                     femaleCrew={props.femaleCrew}
                     maleCrew={props.maleCrew}
