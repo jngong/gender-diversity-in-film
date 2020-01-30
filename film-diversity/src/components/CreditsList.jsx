@@ -9,6 +9,18 @@ function CreditsList(props) {
         return <div>Loading...</div>
     }
 
+    function mapCredits(list) {
+        console.log(list)
+        list.map((person, i) => {
+            return (
+                <div className="cast-member" key={i}>
+                    <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
+                    <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
+                </div>
+            )
+        })
+    }
+
     //* Mapping through the array of female cast members passed down as props from MovieDetails component.
     const femaleCast = props.femaleCast.map((person, i) => {
         return (
@@ -75,7 +87,7 @@ function CreditsList(props) {
                 <h3>Who's who in the cast?</h3>
                 <div className="members females">
                     <h2>Female Cast Members: {props.femaleCast.length}</h2>
-                    {femaleCast}
+                    {mapCredits(props.femaleCast)}
                 </div>
                 <div className="members males">
                     <h2>Male Cast Members: {props.maleCast.length}</h2>
