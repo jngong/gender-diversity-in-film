@@ -408,28 +408,25 @@ footer hr {
 /* *********** Breakpoint for smaller laptop and tablet screens (width < 1050px)  *********** */
 
 @media only screen and (max-width: 1050px) {
+  header {
+    padding: 1rem;
+  }
 
-    header {
-      padding: 1rem;
-    }
+  /* **** Credits List Component **** */
+  .credits-members {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    /* **** Credits List Component **** */
-    .credits-members {
-      flex-direction: column;
-      align-items: center;
-    }
+  .members {
+    width: 80vw;
+  }
 
-    .members {
-      width: 80vw;
-    }
-
-    .cast-member {
-      width: 10%;
-      margin: .5rem;   
-    }
-  
+  .cast-member {
+    width: 10%;
+    margin: .5rem;   
+  }
 }
-
 
 /* *********** Breakpoint for Mobile devices (width < 650px)  *********** */
 
@@ -440,7 +437,7 @@ footer hr {
   }
 
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
   }
   
@@ -451,7 +448,7 @@ footer hr {
   }
   
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     letter-spacing: 1px;
   }
 
@@ -518,7 +515,7 @@ footer hr {
   }
 
   .movie-gender-summary h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 0 .3rem; 
   }
 
@@ -559,8 +556,9 @@ footer hr {
 
   /* **** Credits List Component **** */
 
-  .credits-list h3 {
+  .credits-header {
     padding: 1rem 0;
+    font-size: 1rem;
   }
 
   .members {
