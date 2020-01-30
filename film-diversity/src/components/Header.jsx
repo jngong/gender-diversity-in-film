@@ -15,7 +15,7 @@ function Header(props) {
         <header>
             <h1>Gender Diversity in Film</h1>
             <Link exact="true" activeclassname="active" to="/">
-                <i class="fas fa-arrow-left"></i> Back
+                <i className="fas fa-arrow-left"></i> Back
             </Link>
         </header>
     )

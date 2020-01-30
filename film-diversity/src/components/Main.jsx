@@ -25,9 +25,7 @@ class Main extends Component {
         })
     }
 
-
     //* Define a function to handle click on movie button to set the state of currentMovie which will be passed into the search bar for hiding on render of a movie details page.
-
     handleClick = (id) => {
         this.setState({
             currentMovie: id
@@ -41,7 +39,7 @@ class Main extends Component {
         })
     }
 
-    //* Define a function to handle submit on search button and use it to trigger API call and setState of searchList.
+    //* Define a function to handle submit on search form and use it to trigger API call and setState of searchList.
     //* Upon submit, this also sets the state for listDisplay to show the search results.
     handleSubmit = async (e) => {
         e.preventDefault();
@@ -50,6 +48,7 @@ class Main extends Component {
             alert('Please enter a film title to search.')
             return
         }
+
         let data = await getMoviesBySearch(this.state.searchTerm)
 
         this.setState({
