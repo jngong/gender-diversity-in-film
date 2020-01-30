@@ -9,8 +9,7 @@ function CreditsList(props) {
         return <div>Loading...</div>
     }
 
-    function mapCredits(list) {
-        console.log(list)
+    function mapCast(list) {
         const display = list.map((person, i) => {
             return (
                 <div className="cast-member" key={i}>
@@ -19,48 +18,22 @@ function CreditsList(props) {
                 </div>
             )
         })
+
         return display
+
     }
 
-    //* Mapping through the array of cast members who don't have an identified gender passed down as props from MovieDetails component. 
-    const unknownCast = props.unknownCast.map((person, i) => {
-        return (
-            <div className="cast-member" key={i}>
-                <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
-            </div>
-        )
-    })
-
-    //* Mapping through the array of crew members who don't have an identified gender passed down as props from MovieDetails component. 
-    const unknownCrew = props.unknownCrew.map((person, i) => {
-        return (
-            <div className="cast-member" key={i}>
-                <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
-            </div>
-        )
-    })
-
-    //* Mapping through the array of female crew  members passed down as props from MovieDetails component. 
-    const femaleCrew = props.femaleCrew.map((person, i) => {
-        return (
-            <div className="cast-member" key={i}>
-                <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
-            </div>
-        )
-    })
-
-    //* Mapping through the array of male crew  members passed down as props from MovieDetails component. 
-    const maleCrew = props.maleCrew.map((person, i) => {
-        return (
-            <div className="cast-member" key={i}>
-                <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
-            </div>
-        )
-    })
+    const mapCrew = (list) => {
+        const display = list.map((person, i) => {
+            return (
+                <div className="cast-member" key={i}>
+                    <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
+                    <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
+                </div>
+            )
+        })
+        return display
+    }
 
     return (
         <div>
@@ -68,16 +41,16 @@ function CreditsList(props) {
                 <h3>Who's who in the cast?</h3>
                 <div className="members females">
                     <h2>Female Cast Members: {props.femaleCast.length}</h2>
-                    {mapCredits(props.femaleCast)}
+                    {mapCast(props.femaleCast)}
                 </div>
                 <div className="members males">
                     <h2>Male Cast Members: {props.maleCast.length}</h2>
-                    {mapCredits(props.maleCast)}
+                    {mapCast(props.maleCast)}
                 </div>
                 <div className="members gender-not-identified">
                     <h2>Additional Cast Members: {props.unknownCast.length}</h2>
                     <p style={{ fontStyle: 'italic' }}>These cast members are not identified as female or male in the database.</p>
-                    {unknownCast}
+                    {mapCast(props.unknownCast)}
                 </div>
             </div>
 
@@ -85,16 +58,16 @@ function CreditsList(props) {
                 <h3>Who's who in the crew?</h3>
                 <div className="members females">
                     <h2>Female Crew Members: {props.femaleCrew.length}</h2>
-                    {femaleCrew}
+                    {mapCrew(props.femaleCrew)}
                 </div>
                 <div className="members males">
                     <h2>Male Crew Members: {props.maleCrew.length}</h2>
-                    {maleCrew}
+                    {mapCrew(props.maleCrew)}
                 </div>
                 <div className="members gender-not-identified">
                     <h2>Additional Crew Members: {props.unknownCrew.length}</h2>
                     <p>These crew members are not identified as female or male in the database.</p>
-                    {unknownCrew}
+                    {mapCrew(props.unknownCrew)}
                 </div>
             </div>
 
