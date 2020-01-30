@@ -3,6 +3,8 @@
 
 ## Gender Diversity in Film
 
+http://gender-diversity-in-film.surge.sh/
+
 This app will allow users to explore gender representation and equality in the film industry. Visitors will search for a film (or click on one available) to view gender stats for the cast and crew (i.e. % female vs. % male), the cast and crew members split by gender, and possibly, whether or not that film passes the 3 criteria of the Bechdel Test (Are there 2 named women in the cast? Do they talk to each other? And about something other than a man?).
 
 ## API Snippet
@@ -147,11 +149,11 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 | Set up MovieDetails and ensure router works  | H | 3hrs| 1hr | 1hr |
 | Create logic for GenderCalc of cast and crew and display result | H | 4hrs| 4hrs | 4hrs |
 | Bechdel Test data API call and display result  | L | 3hrs| 3hrs | 3hrs |
-| Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| 3hrs | 3hrs |
+| Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| 4hrs | 4hrs |
 | CSS styling - desktop  | M | 4hrs| 6hrs | 6hrs |
 | CSS styling - mobile | M | 2hrs| 3hrs | 3hrs |
-| Refactor Code | L | 4hrs| 2hrs | 2hrs |
-| Total | H | 33hrs| 35hrs | 35hrs |
+| Refactor Code | L | 4hrs| 4hrs | 4hrs |
+| Total | H | 33hrs| 38hrs | 38hrs |
 
 ## Project Schedule
 
