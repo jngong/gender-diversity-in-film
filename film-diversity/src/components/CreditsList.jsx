@@ -6,7 +6,7 @@ function CreditsList(props) {
     const imgURL = 'https://image.tmdb.org/t/p/w185'
 
     if (props.femaleCast === null) {
-        return <div>Loading..</div>
+        return <div>Loading...</div>
     }
 
     //* Mapping through the array of female cast members passed down as props from MovieDetails component.
@@ -20,7 +20,6 @@ function CreditsList(props) {
     })
 
     //* Mapping through the array of male cast members passed down as props from MovieDetails component. 
-    // TODO: This is not DRY code. Will need to refactor later.
     const maleCast = props.maleCast.map((person, i) => {
         return (
             <div className="cast-member" key={i}>
@@ -31,7 +30,6 @@ function CreditsList(props) {
     })
 
     //* Mapping through the array of cast members who don't have an identified gender passed down as props from MovieDetails component. 
-    // TODO: This is not DRY code. Will need to refactor later.
     const unknownCast = props.unknownCast.map((person, i) => {
         return (
             <div className="cast-member" key={i}>
@@ -42,7 +40,6 @@ function CreditsList(props) {
     })
 
     //* Mapping through the array of crew members who don't have an identified gender passed down as props from MovieDetails component. 
-    // TODO: This is not DRY code. Will need to refactor later.
     const unknownCrew = props.unknownCrew.map((person, i) => {
         return (
             <div className="cast-member" key={i}>
@@ -53,7 +50,6 @@ function CreditsList(props) {
     })
 
     //* Mapping through the array of female crew  members passed down as props from MovieDetails component. 
-    // TODO: This is not DRY code. Will need to refactor later.
     const femaleCrew = props.femaleCrew.map((person, i) => {
         return (
             <div className="cast-member" key={i}>
@@ -64,7 +60,6 @@ function CreditsList(props) {
     })
 
     //* Mapping through the array of male crew  members passed down as props from MovieDetails component. 
-    // TODO: This is not DRY code. Will need to refactor later.
     const maleCrew = props.maleCrew.map((person, i) => {
         return (
             <div className="cast-member" key={i}>

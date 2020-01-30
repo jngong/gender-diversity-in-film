@@ -64,8 +64,8 @@ class MovieDetails extends Component {
 
         const formattedBudget = formatNumber(budget)
         const formattedRevenue = formatNumber(revenue)
-
         const backdropBaseURL = 'https://image.tmdb.org/t/p/w1280/'
+
         return (
             <div className="movie-details">
 
@@ -108,4 +108,5 @@ class MovieDetails extends Component {
     }
 
 }
+
 export default MovieDetails

@@ -24,13 +24,13 @@ class BechdelTest extends Component {
     }
 
     setValues() {
-        switch(this.state.bechdelRating) {
+        switch (this.state.bechdelRating) {
             case 0:
                 this.setState({
                     bechdelValues: ['fas fa-frown', false, false, false]
                 });
                 break;
-            case 1: 
+            case 1:
                 this.setState({
                     bechdelValues: ['fas fa-meh', true, false, false]
                 });
@@ -40,7 +40,7 @@ class BechdelTest extends Component {
                     bechdelValues: ['fas fa-meh', true, true, false]
                 });
                 break;
-            case 3: 
+            case 3:
                 this.setState({
                     bechdelValues: ['fas fa-grin-hearts', true, true, true]
                 })
@@ -50,8 +50,7 @@ class BechdelTest extends Component {
         }
     }
 
-    render(props) {
-        console.log(this.state.bechdelValues)
+    render() {
         if (this.state.bechdelRating !== undefined) {
             return (
                 <div className="bechdel-test">
