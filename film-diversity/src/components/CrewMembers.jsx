@@ -3,7 +3,7 @@ import React from "react"
 function CrewMembers(props) {
 
     return (
-        <div className="credits-members">
+        <div className="credits-members" style={props.crewVisibility ? {display: "flex"}: {display: "none"}}>
             <div className="members females">
                 <h2>Female Crew Members: {props.femaleCrew.length}</h2>
                 {props.mapCredits(props.femaleCrew)}

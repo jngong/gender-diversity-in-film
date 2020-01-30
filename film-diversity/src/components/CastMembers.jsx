@@ -3,7 +3,7 @@ import React from "react"
 function CastMembers(props) {
 
     return (
-        <div className="credits-members">
+        <div className="credits-members" style={props.castVisibility ? {display: "flex"}: {display: "none"}}>
             <div className="members females">
                 <h2>Female Cast Members: {props.femaleCast.length}</h2>
                 {props.mapCredits(props.femaleCast)}

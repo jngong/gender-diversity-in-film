@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PersonImage from '../images/person-placeholder-185x278.png'
 import CastMembers from './CastMembers'
 import CrewMembers from './CrewMembers'
@@ -6,6 +6,17 @@ import CrewMembers from './CrewMembers'
 function CreditsList(props) {
 
     const imgURL = 'https://image.tmdb.org/t/p/w185'
+
+    const [castVisibility, setCastVisibility] = useState(true)
+    const [crewVisibility, setCrewVisibility] = useState(true)
+
+    const handleClick = (listType) => {
+        if (listType === 'cast') {
+            setCastVisibility(!castVisibility)
+        } else if (listType === 'crew') {
+            setCrewVisibility(!crewVisibility)
+        }
+    }
 
     if (props.femaleCast === null) {
         return <div>Loading...</div>
@@ -27,25 +38,36 @@ function CreditsList(props) {
         })
         return display
     }
-
     return (
         <div>
             <div className="credits-list cast">
-                <h3>Who's who in the cast?</h3>
+                <h3>
+                    Who's who in the cast?
+                    <span onClick={() => handleClick('cast')} >
+                        <i className={castVisibility ? "far fa-minus-square" : "far fa-plus-square"}></i>
+                    </span>
+                </h3>
                 <CastMembers 
                     femaleCast={props.femaleCast} 
                     maleCast={props.maleCast} 
                     unknownCast={props.unknownCast} 
                     mapCredits={mapCredits}
+                    castVisibility={castVisibility}
                 />
             </div>
             <div className="credits-list crew">
-                <h3>Who's who in the crew?</h3>
+                <h3>
+                    Who's who in the crew?
+                    <span onClick={() => handleClick('crew')}>
+                        <i className={crewVisibility ? "far fa-minus-square" : "far fa-plus-square"}></i>
+                    </span>
+                </h3>
                 <CrewMembers 
                     femaleCrew={props.femaleCrew}
                     maleCrew={props.maleCrew}
                     unknownCrew={props.unknownCrew}
                     mapCredits={mapCredits}
+                    crewVisibility={crewVisibility}
                 />
             </div>
         </div>
