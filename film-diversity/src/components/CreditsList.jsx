@@ -9,26 +9,17 @@ function CreditsList(props) {
         return <div>Loading...</div>
     }
 
-    function mapCast(list) {
+    const mapCredits = (list) => {
         const display = list.map((person, i) => {
             return (
                 <div className="cast-member" key={i}>
-                    <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                    <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
-                </div>
-            )
-        })
-
-        return display
-
-    }
-
-    const mapCrew = (list) => {
-        const display = list.map((person, i) => {
-            return (
-                <div className="cast-member" key={i}>
-                    <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                    <p>{person.name}{person.job ? `, ${person.job}` : ``}</p>
+                    <img 
+                        src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} 
+                    />
+                    <p>
+                        {person.name}
+                        {person.cast_id ? `${person.character ? `, "${person.character}"` : ''}` : `${person.job ? `, ${person.job}` : ''}` }
+                    </p>
                 </div>
             )
         })
@@ -41,16 +32,16 @@ function CreditsList(props) {
                 <h3>Who's who in the cast?</h3>
                 <div className="members females">
                     <h2>Female Cast Members: {props.femaleCast.length}</h2>
-                    {mapCast(props.femaleCast)}
+                    {mapCredits(props.femaleCast)}
                 </div>
                 <div className="members males">
                     <h2>Male Cast Members: {props.maleCast.length}</h2>
-                    {mapCast(props.maleCast)}
+                    {mapCredits(props.maleCast)}
                 </div>
                 <div className="members gender-not-identified">
                     <h2>Additional Cast Members: {props.unknownCast.length}</h2>
                     <p style={{ fontStyle: 'italic' }}>These cast members are not identified as female or male in the database.</p>
-                    {mapCast(props.unknownCast)}
+                    {mapCredits(props.unknownCast)}
                 </div>
             </div>
 
@@ -58,16 +49,16 @@ function CreditsList(props) {
                 <h3>Who's who in the crew?</h3>
                 <div className="members females">
                     <h2>Female Crew Members: {props.femaleCrew.length}</h2>
-                    {mapCrew(props.femaleCrew)}
+                    {mapCredits(props.femaleCrew)}
                 </div>
                 <div className="members males">
                     <h2>Male Crew Members: {props.maleCrew.length}</h2>
-                    {mapCrew(props.maleCrew)}
+                    {mapCredits(props.maleCrew)}
                 </div>
                 <div className="members gender-not-identified">
                     <h2>Additional Crew Members: {props.unknownCrew.length}</h2>
                     <p>These crew members are not identified as female or male in the database.</p>
-                    {mapCrew(props.unknownCrew)}
+                    {mapCredits(props.unknownCrew)}
                 </div>
             </div>
 
@@ -77,7 +68,3 @@ function CreditsList(props) {
 }
 
 export default CreditsList
-
-/*
-    TODO: Note that each mapping of credits members by gender is not DRY and will want to refactor it later.
-*/
