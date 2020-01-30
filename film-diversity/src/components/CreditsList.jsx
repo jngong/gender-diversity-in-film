@@ -11,7 +11,7 @@ function CreditsList(props) {
 
     function mapCredits(list) {
         console.log(list)
-        list.map((person, i) => {
+        const display = list.map((person, i) => {
             return (
                 <div className="cast-member" key={i}>
                     <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
@@ -19,27 +19,8 @@ function CreditsList(props) {
                 </div>
             )
         })
+        return display
     }
-
-    //* Mapping through the array of female cast members passed down as props from MovieDetails component.
-    const femaleCast = props.femaleCast.map((person, i) => {
-        return (
-            <div className="cast-member" key={i}>
-                <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
-            </div>
-        )
-    })
-
-    //* Mapping through the array of male cast members passed down as props from MovieDetails component. 
-    const maleCast = props.maleCast.map((person, i) => {
-        return (
-            <div className="cast-member" key={i}>
-                <img src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} />
-                <p>{person.name}{person.character ? `, "${person.character}"` : ``}</p>
-            </div>
-        )
-    })
 
     //* Mapping through the array of cast members who don't have an identified gender passed down as props from MovieDetails component. 
     const unknownCast = props.unknownCast.map((person, i) => {
@@ -91,7 +72,7 @@ function CreditsList(props) {
                 </div>
                 <div className="members males">
                     <h2>Male Cast Members: {props.maleCast.length}</h2>
-                    {maleCast}
+                    {mapCredits(props.maleCast)}
                 </div>
                 <div className="members gender-not-identified">
                     <h2>Additional Cast Members: {props.unknownCast.length}</h2>
