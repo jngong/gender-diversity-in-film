@@ -13,12 +13,12 @@ function CreditsList(props) {
         const display = list.map((person, i) => {
             return (
                 <div className="cast-member" key={i}>
-                    <img 
-                        src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name} 
+                    <img
+                        src={person.profile_path ? `${imgURL}${person.profile_path}` : `${PersonImage}`} alt={person.name}
                     />
                     <p>
                         {person.name}
-                        {person.cast_id ? `${person.character ? `, "${person.character}"` : ''}` : `${person.job ? `, ${person.job}` : ''}` }
+                        {person.cast_id ? `${person.character ? `, "${person.character}"` : ''}` : `${person.job ? `, ${person.job}` : ''}`}
                     </p>
                 </div>
             )
@@ -61,7 +61,6 @@ function CreditsList(props) {
                     {mapCredits(props.unknownCrew)}
                 </div>
             </div>
-
         </div>
     )
 

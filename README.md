@@ -127,7 +127,7 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 | MovieButton | The MovieButton will display an image and name for each movie object mapped from MovieList and set state for currentMovie on click | Functional |
 | MovieDetails | The MovieDetails receives selectedMovieId as props in order to fetch the currentMovie object from the API and set it in state. Will also define a method to calculate gender percentage that will be passed to child components. Will also render basic movie information like name, year and revenue| Class |
 | GenderCalc | The GenderCalc receives props about the cast and crew to calculate the ratio of women to men and render results | Functional |
-| BechdelTest | The BechdelTest receives props for the IMDB id that will set an API call to Bechdel API and render result | Functional |
+| BechdelTest | The BechdelTest receives props for the IMDB id that will set an API call to Bechdel API and render result | Class |
 | CastList | The CastList receives props from the currentMovie state to map through the list of characters and render in two different divs | Functional |
 
 ## Priority Matrix
@@ -150,7 +150,8 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 | Set up CastList component to map through array, splitting female on one side and male on the other | M | 3hrs| 3hrs | 3hrs |
 | CSS styling - desktop  | M | 4hrs| 6hrs | 6hrs |
 | CSS styling - mobile | M | 2hrs| 3hrs | 3hrs |
-| Total | H | 33hrs| 33hrs | 33hrs |
+| Refactor Code | L | 4hrs| 2hrs | 2hrs |
+| Total | H | 33hrs| 35hrs | 35hrs |
 
 ## Project Schedule
 
@@ -172,7 +173,7 @@ https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
 
 - Issue 1: How to hide the Search component based on route: As I progressed, I realized that it was confusing to keep the search bar visible when the user landed on a details page. However, because my Search component wasn't explicitly nested under my Movie List component, I had trouble figuring out how to hide it on the Movie Details component. I did some Google research and discovered the "withRouter" method within react router dom. After some trial and error with the match syntax, I was able to get this to work.
 
-- Issue 2: My movie details component requires me to filter through the credits twice based on gender (once for cast and once for crew), then each is mapped 3 times for displaying the credits separated by gender group. I had trouble getting this logic to be DRY and so just copied and pasted the code for it to work. I plan to go back and refactor this code.
+- Issue 2: My movie details component requires me to filter through the credits twice based on gender (once for cast and once for crew), then each is mapped 3 times for displaying the credits separated by gender group. I had trouble getting this logic to be DRY and so just copied and pasted the code for it to work. Once I was done with MVP and requirements, I created a feature branch to troubleshoot. I created a new function that takes an array as a parameter, then tested it with 1 section before changing all 6. It still wasn't working so I console logged the list to make sure the function was being called and passing the argument properly. All looked good, so it was an issue with my return statement. I realized that although I was returning the divs in the mapping, I wasn't returning the mapping to the function and so when I added a return statement outside of the map, all was rendering as expected. From there, I applied the changes to the rest of the sections and was able to delete many lines of repetitive code.
 
 ## Code Snippet
 

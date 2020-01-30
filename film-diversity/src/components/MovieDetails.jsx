@@ -106,7 +106,6 @@ class MovieDetails extends Component {
             </div> /* End of movie details div */
         )
     }
-
 }
 
 export default MovieDetails
