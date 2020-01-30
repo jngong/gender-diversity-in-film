@@ -1,5 +1,7 @@
 import React from 'react'
 import PersonImage from '../images/person-placeholder-185x278.png'
+import CastMembers from './CastMembers'
+import CrewMembers from './CrewMembers'
 
 function CreditsList(props) {
 
@@ -30,40 +32,24 @@ function CreditsList(props) {
         <div>
             <div className="credits-list cast">
                 <h3>Who's who in the cast?</h3>
-                <div className="members females">
-                    <h2>Female Cast Members: {props.femaleCast.length}</h2>
-                    {mapCredits(props.femaleCast)}
-                </div>
-                <div className="members males">
-                    <h2>Male Cast Members: {props.maleCast.length}</h2>
-                    {mapCredits(props.maleCast)}
-                </div>
-                <div className="members gender-not-identified">
-                    <h2>Additional Cast Members: {props.unknownCast.length}</h2>
-                    <p style={{ fontStyle: 'italic' }}>These cast members are not identified as female or male in the database.</p>
-                    {mapCredits(props.unknownCast)}
-                </div>
+                <CastMembers 
+                    femaleCast={props.femaleCast} 
+                    maleCast={props.maleCast} 
+                    unknownCast={props.unknownCast} 
+                    mapCredits={mapCredits}
+                />
             </div>
-
             <div className="credits-list crew">
                 <h3>Who's who in the crew?</h3>
-                <div className="members females">
-                    <h2>Female Crew Members: {props.femaleCrew.length}</h2>
-                    {mapCredits(props.femaleCrew)}
-                </div>
-                <div className="members males">
-                    <h2>Male Crew Members: {props.maleCrew.length}</h2>
-                    {mapCredits(props.maleCrew)}
-                </div>
-                <div className="members gender-not-identified">
-                    <h2>Additional Crew Members: {props.unknownCrew.length}</h2>
-                    <p>These crew members are not identified as female or male in the database.</p>
-                    {mapCredits(props.unknownCrew)}
-                </div>
+                <CrewMembers 
+                    femaleCrew={props.femaleCrew}
+                    maleCrew={props.maleCrew}
+                    unknownCrew={props.unknownCrew}
+                    mapCredits={mapCredits}
+                />
             </div>
         </div>
     )
-
 }
 
 export default CreditsList
