@@ -5,7 +5,7 @@ dotenv.config()
 const api_key = process.env.REACT_APP_TMDB_API_KEY
 
 const TMDB_base = 'https://api.themoviedb.org/3/'
-const Bechdel_base = "http://bechdeltest.com/api/v1/getMovieByImdbId?imdbid="
+const Bechdel_base = "https://cors-anywhere.herokuapp.com/https://bechdeltest.com/api/v1/getMovieByImdbId?imdbid="
 
 
 export const getMoviesNowPlaying = async () => {
