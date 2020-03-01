@@ -91,7 +91,7 @@ https://bechdeltest.com/api/v1/doc
 ```
 
 ## Wireframes
-https://whimsical.com/GYUEz66Tc3rVFSrETznNUJ
+![Wireframe](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_915/v1579876754/Wireframe-Project2-Jan24-2020_dczxwk.png)
 
 ### MVP
 
