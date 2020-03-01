@@ -90,8 +90,8 @@ https://bechdeltest.com/api/v1/doc
 
 ```
 
-## Wireframes
-![Wireframe](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_915/v1579876754/Wireframe-Project2-Jan24-2020_dczxwk.png)
+## Wireframe
+![Wireframe](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_800/v1579876754/Wireframe-Project2-Jan24-2020_dczxwk.png)
 
 ### MVP
 
