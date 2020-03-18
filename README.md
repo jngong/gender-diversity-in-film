@@ -1,9 +1,6 @@
-# Project Overview
-![Winter Themed GIF](https://media.giphy.com/media/xUySTQ6Ed5CVlxNgQ0/giphy.gif)
-
 ## Gender Diversity in Film
 
-http://gender-diversity-in-film.surge.sh/
+https://gender-diversity-in-film.surge.sh/
 
 This app will allow users to explore gender representation and equality in the film industry. Visitors will search for a film (or click on one available) to view gender stats for the cast and crew (i.e. % female vs. % male), the cast and crew members split by gender, and possibly, whether or not that film passes the 3 criteria of the Bechdel Test (Are there 2 named women in the cast? Do they talk to each other? And about something other than a man?).
 
