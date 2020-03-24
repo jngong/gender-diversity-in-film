@@ -88,7 +88,7 @@ https://bechdeltest.com/api/v1/doc
 ```
 
 ## Wireframe
-![Wireframe](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_800/v1579876754/Wireframe-Project2-Jan24-2020_dczxwk.png)
+![Wireframe](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_800/v1579876754/Project%202%20-%20Gender%20Diversity%20in%20Film/Wireframe-Project2-Jan24-2020_dczxwk.png)
 
 ### MVP
 
@@ -111,7 +111,7 @@ https://bechdeltest.com/api/v1/doc
 
 ## React Component Hierarchy
 
-![Component Hierarchy](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_700/v1579876754/Component-Hierarchy-Project2-Jan24-2020_kzbdgd.png)
+![Component Hierarchy](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_800/v1579876754/Project%202%20-%20Gender%20Diversity%20in%20Film/Component-Hierarchy-Project2-Jan24-2020_kzbdgd.png)
 
 ## Components
 
@@ -131,7 +131,7 @@ https://bechdeltest.com/api/v1/doc
 
 ## Priority Matrix
 
-![Priority Matrix](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_600/v1579876753/Priority-Matrix-Project2-Jan24-2020_afywjs.png)
+![Priority Matrix](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_600/v1579876753/Project%202%20-%20Gender%20Diversity%20in%20Film/Priority-Matrix-Project2-Jan24-2020_afywjs.png)
 
 ## Timeframes
 
