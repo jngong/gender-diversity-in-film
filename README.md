@@ -1,4 +1,4 @@
-## Gender Diversity in Film
+# Gender Diversity in Film
 
 Deployed application: https://gender-diversity-in-film.surge.sh/
 
@@ -43,7 +43,7 @@ function Search(props) {
 export default withRouter(Search)
 ```
 
-### MVP Overview
+## MVP Overview
 
 - Pulls data from 2 APIs and render information from each based on imdb_id match
 - Allows user to search for a movie by title and show results that match 
@@ -58,7 +58,7 @@ export default withRouter(Search)
 ## React Component Hierarchy
 ![Component Hierarchy](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_800/v1579876754/Project%202%20-%20Gender%20Diversity%20in%20Film/Component-Hierarchy-Project2-Jan24-2020_kzbdgd.png)
 
-## Wireframe
+## Wireframes
 ![Wireframe](https://res.cloudinary.com/db0kbxvhr/image/upload/c_scale,w_800/v1579876754/Project%202%20-%20Gender%20Diversity%20in%20Film/Wireframe-Project2-Jan24-2020_dczxwk.png)
 
 ##  Libraries Used
@@ -77,7 +77,7 @@ export default withRouter(Search)
 - 1/27 - Added a new state for "activeSearch" to main to keep track of search status. When true, MovieList displays search results instead of now playing list; opposite when false. Added a "clear search" button in the Search component to reset the state of the MovieList to its default - showing "Now Playing" movies.
 - 1/27 - Converted the Bechdel Test component from functional to class to accommodate the API call for rating data and declare a state for the imdb id.
 
-#### Post-MVP Goals
+## Post-MVP Goals
 - Convert class components to functional components with hooks to get practice in both
 - Add routes to profile pages for each actor clickable from each Movie page
 - Add recent articles from the News API that mentions that movie to encourage more browsing
